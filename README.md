@@ -21,31 +21,30 @@ Requires:
 Through Composer
 ~~~~~~~~~~~~~~~~
 
+Require the extension:
 
-1. Require the extension:
+```
+$ composer require --dev rmiller/behat-spec:~0.1
+```
 
-    .. code-block:: bash
+Activate the Behat extension by specifying its class in your ``behat.yml``:
 
-        $ composer require --dev rmiller/behat-spec:~0.1
+```yaml
+# behat.yml
+default:
+ # ...
+ extensions:
+   RMiller\BehatSpec\BehatExtension: ~:
+     path:  bin/phpspec #default value is bin/phpspec
+```     
 
-2. Activate the Behat extension by specifying its class in your ``behat.yml``:
+Activate the PhpSpec extension by specifying its class in your ``phpspec.yml``:
 
-   .. code-block:: yaml
-
-       # behat.yml
-       default:
-         # ...
-         extensions:
-           RMiller\BehatSpec\BehatExtension: ~:
-             path:  bin/phpspec #default value is bin/phpspec
-
-3. Activate the PhpSpec extension by specifying its class in your ``phpspec.yml``:
-
-   .. code-block:: yaml
-
-       # phpspec.yml
-       extensions:
-         - RMiller\BehatSpec\PhpSpecExtension
+```yaml
+# phpspec.yml
+extensions:
+ - RMiller\BehatSpec\PhpSpecExtension
+```
 
 Still to Come
 ~~~~~~~~~~~~~
