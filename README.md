@@ -50,6 +50,5 @@ Through Composer
 Still to Come
 ~~~~~~~~~~~~~
 
-* Confirmation before creating specs and adding examples
 * Executing the phpspec run command automatically after creating specs and adding examples
 * Other things, any ideas?
