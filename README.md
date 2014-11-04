@@ -26,7 +26,7 @@ Through Composer
 
     .. code-block:: bash
 
-        $ composer require --dev rmiller/behat-spec:dev-master
+        $ composer require --dev rmiller/behat-spec:~0.1
 
 2. Activate the Behat extension by specifying its class in your ``behat.yml``:
 
