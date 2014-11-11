@@ -17,7 +17,8 @@
         "php": ">=5.4",
         "rmiller/error-extension": "~0.1",
         "rmiller/phpspec-extension": "~0.1",
-        "rmiller/exemplify-extension": "~0.1"
+        "rmiller/exemplify-extension": "~0.1",
+        "rmiller/phpspec-run-extension": "dev-master"
     },
 
     "autoload": {
