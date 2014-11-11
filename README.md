@@ -18,37 +18,33 @@ Requires:
 * PhpSpec 2.0+
 * PHP 5.4+
 
-Through Composer
-~~~~~~~~~~~~~~~~
+Require the extension:
 
+```
+$ composer require --dev rmiller/behat-spec:~0.1
+```
 
-1. Require the extension:
+Activate the Behat extension by specifying its class in your `behat.yml`:
 
-    .. code-block:: bash
+```yaml
+# behat.yml
+default:
+ # ...
+ extensions:
+   RMiller\BehatSpec\BehatExtension:
+     path:  bin/phpspec #default value is bin/phpspec
+```     
 
-        $ composer require --dev rmiller/behat-spec:~0.1
+Activate the PhpSpec extension by specifying its class in your `phpspec.yml`:
 
-2. Activate the Behat extension by specifying its class in your ``behat.yml``:
-
-   .. code-block:: yaml
-
-       # behat.yml
-       default:
-         # ...
-         extensions:
-           RMiller\BehatSpec\BehatExtension: ~:
-             path:  bin/phpspec #default value is bin/phpspec
-
-3. Activate the PhpSpec extension by specifying its class in your ``phpspec.yml``:
-
-   .. code-block:: yaml
-
-       # phpspec.yml
-       extensions:
-         - RMiller\BehatSpec\PhpSpecExtension
+```yaml
+# phpspec.yml
+extensions:
+ - RMiller\BehatSpec\PhpSpecExtension
+```
 
 Still to Come
-~~~~~~~~~~~~~
+-------------
 
 * Executing the phpspec run command automatically after creating specs and adding examples
 * Other things, any ideas?
