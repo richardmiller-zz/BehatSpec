@@ -5,6 +5,7 @@ Integration between Behat and PhpSpec.
 
 * Creates specs for any missing classes encountered when running behat
 * Adds examples for any missing methods encountered when running behat
+* Executes the phpspec run command after this to add the described class/method
 
 It provides an extension for PhpSpec and an extension for Behat. Both need
 to be enabled for the full functionality.
@@ -23,6 +24,9 @@ Require the extension:
 ```
 $ composer require --dev rmiller/behat-spec:~0.1
 ```
+
+To get the phpspec run command running, you need to use latest phpspec 2.1@dev.
+Otherwise that functionality will silently fail.
 
 Activate the Behat extension by specifying its class in your `behat.yml`:
 
@@ -43,8 +47,3 @@ extensions:
  - RMiller\BehatSpec\PhpSpecExtension
 ```
 
-Still to Come
--------------
-
-* Executing the phpspec run command automatically after creating specs and adding examples
-* Other things, any ideas?
