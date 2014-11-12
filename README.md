@@ -22,7 +22,7 @@ Requires:
 Require the extension:
 
 ```
-$ composer require --dev rmiller/behat-spec:~0.1
+$ composer require --dev rmiller/behat-spec:~0.2
 ```
 
 To get the phpspec run command running, you need to use latest phpspec 2.1@dev.
