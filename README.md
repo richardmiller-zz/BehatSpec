@@ -32,6 +32,40 @@ be used to automatically create the class or model. Since this is the typical
 next step in most cases, this extension automates that by asking you if you would
 like to do that next.
 
+### An Example
+
+So to use an example from the blog post linked above:
+
+```
+/**
+ * @Given a product named :name and priced £:price was added to the catalogue
+ */
+public function aProductNamedAndPricedWasAddedToTheCatalogue($name, Money $price)
+{
+    $aProduct = Product::namedAndPriced($name, $price);
+    $this->catalogue->add($aProduct);
+}
+```
+
+Running the feature relating to this context would result in a fatal exception normally.
+Instead you get a simple error and the offer to create a spec for the missing class:
+
+![Product not found](/docs/images/error.png?raw=true)
+
+The spec is created followed by an offer to run `phpspec run`:
+
+![Spec created](/docs/images/spec-created.png?raw=true)
+
+Which asks to create the class:
+
+![Created Product?](/docs/images/create.png?raw=true)
+
+![Product created](/docs/images/product-created.png?raw=true)
+
+Running Behat again will result in a similar process for the `namedAndPriced` method.
+Where an example for the method will be added to the spec and the method added
+to the class.
+
 ## How
 
 ### Installation
@@ -89,7 +123,7 @@ default:
     - RMiller\BehatSpec\PhpSpecExtension
   rerunner:
     path: vendor/bin/phpspec
-    commands: [describe, exemplify, your-own-fancy-command]
+    commands: [describe, exemplify, your_own_fancy_command]
 ```
 
 ### Some Details
