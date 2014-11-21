@@ -5,7 +5,7 @@ namespace RMiller\BehatSpec;
 use Behat\Testwork\ServiceContainer\Extension;
 use Behat\Testwork\ServiceContainer\ExtensionManager;
 use RMiller\ErrorExtension\ErrorExtension;
-use RMiller\PhpSpecExtension\PhpSpecExtension;
+use RMiller\PhpSpecExtension\PhpSpecExtension as BehatPhpSpecExtension;
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
@@ -16,7 +16,7 @@ class BehatExtension implements Extension
     public function __construct()
     {
         $this->extensions = [
-            new PhpSpecExtension(),
+            new BehatPhpSpecExtension(),
             new ErrorExtension(),
         ];
     }
