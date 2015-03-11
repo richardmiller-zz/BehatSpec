@@ -53,6 +53,7 @@ class BehatExtension implements Extension
             ->addDefaultsIfNotSet()
             ->children()
                 ->scalarNode('path')->defaultValue('bin/phpspec')->end()
+                ->scalarNode('config')->defaultNull()->end()
             ->end()
          ->end();
     }
