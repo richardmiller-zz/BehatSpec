@@ -102,6 +102,7 @@ default:
  extensions:
    RMiller\BehatSpec\BehatExtension:
      path:  bin/phpspec #default value is bin/phpspec
+     config:  path/to/phpspec.yml #optional
 ```     
 
 Activate the PhpSpec extension by specifying its class in your `phpspec.yml`:
@@ -126,6 +127,7 @@ default:
   rerunner:
     path: vendor/bin/phpspec
     commands: [describe, exemplify, your_own_fancy_command]
+    config: path/to/phpspec.yml #optional
 ```
 
 ### Some Details
