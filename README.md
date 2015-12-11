@@ -97,12 +97,11 @@ Activate the Behat extension by specifying its class in your `behat.yml`:
 
 ```yaml
 # behat.yml
-default:
- # ...
- extensions:
-   RMiller\BehatSpec\BehatExtension:
-     path:  bin/phpspec #default value is bin/phpspec
-     config:  path/to/phpspec.yml #optional
+# ...
+extensions:
+    - RMiller\BehatSpec\BehatExtension:
+        path:  bin/phpspec #default value is bin/phpspec
+        config:  path/to/phpspec.yml #optional
 ```     
 
 Activate the PhpSpec extension by specifying its class in your `phpspec.yml`:
@@ -110,7 +109,7 @@ Activate the PhpSpec extension by specifying its class in your `phpspec.yml`:
 ```yaml
 # phpspec.yml
 extensions:
- - RMiller\BehatSpec\PhpSpecExtension
+    - RMiller\BehatSpec\PhpSpecExtension
 ```
 
 Additional configuration can be provided for the running of the `phpspec run` command:
@@ -120,14 +119,16 @@ These can be overridden as follows:
 
 ```yaml
 # phpspec.yml
-default:
-  # ...
-  extensions:
+suites:
+    default:
+        # ...
+        rerunner:
+            path: vendor/bin/phpspec
+            commands: [describe, exemplify, your_own_fancy_command]
+            config: path/to/phpspec.yml #optional
+
+extensions:
     - RMiller\BehatSpec\PhpSpecExtension
-  rerunner:
-    path: vendor/bin/phpspec
-    commands: [describe, exemplify, your_own_fancy_command]
-    config: path/to/phpspec.yml #optional
 ```
 
 ### Some Details
