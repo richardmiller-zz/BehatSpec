@@ -99,7 +99,7 @@ Activate the Behat extension by specifying its class in your `behat.yml`:
 # behat.yml
 # ...
 extensions:
-    - RMiller\BehatSpec\BehatExtension:
+    RMiller\BehatSpec\BehatExtension:
         path:  bin/phpspec #default value is bin/phpspec
         config:  path/to/phpspec.yml #optional
 ```     
