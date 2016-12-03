@@ -15,7 +15,8 @@
     "require": {
         "php": ">=5.4",
         "phpspec/phpspec": "^2.5",
-        "behat/behat": "~3.0,>=3.0.4"
+        "behat/behat": "~3.0,>=3.0.4",
+        "rmiller/caser": "~0.1"
     },
     "replace": {
         "rmiller/error-extension": "^0.1",
