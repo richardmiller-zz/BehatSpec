@@ -119,13 +119,10 @@ These can be overridden as follows:
 
 ```yaml
 # phpspec.yml
-suites:
-    default:
-        # ...
-        rerunner:
-            path: vendor/bin/phpspec
-            commands: [describe, exemplify, your_own_fancy_command]
-            config: path/to/phpspec.yml #optional
+rerunner:
+    path: vendor/bin/phpspec
+    commands: [describe, exemplify, your_own_fancy_command]
+    config: path/to/phpspec.yml #optional
 
 extensions:
     - RMiller\BehatSpec\PhpSpecExtension
