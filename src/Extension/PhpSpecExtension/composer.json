@@ -1,0 +1,32 @@
+{
+    "name": "rmiller/phpspec-extension",
+    "type": "behat-extension",
+    "description": "PhpSpec extension for Behat",
+    "keywords": ["phpspec", "behat", "bdd"],
+    "homepage": "https://github.com/richardmiller/PhpSpecExtension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Richard Miller",
+            "email": "mrrmiller46@gmail.com"
+        }
+    ],
+
+    "require": {
+        "php":             ">=5.4",
+        "behat/behat":     "~3.0,>=3.0.4",
+        "phpspec/phpspec": "~2.0",
+        "symfony/process": "~2.1|~3.0"
+    },
+    "require-dev": {
+        "rmiller/error-extension": "~0.1",
+        "rmiller/exemplify-extension": "~0.1"
+    },
+    "suggests": {
+        "rmiller/error-extension": "~0.1",
+        "rmiller/exemplify-extension": "~0.1"
+    },
+    "autoload": {
+        "psr-4": { "RMiller\\PhpSpecExtension\\": "src/" }
+    }
+}

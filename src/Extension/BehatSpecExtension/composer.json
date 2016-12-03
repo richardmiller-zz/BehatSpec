@@ -1,0 +1,30 @@
+{
+    "name":         "rmiller/behat-spec",
+    "description":  "Behat and PhpSpec integration",
+    "keywords":     ["BDD", "SpecBDD", "StoryBDD"],
+    "homepage":     "https://github.com/richardmiller/BehatSpec",
+    "type":         "library",
+    "license":      "MIT",
+    "authors":      [
+        {
+            "name":      "Richard Miller",
+            "email":     "mrrmiller46@gmail.com",
+            "homepage":  "http://richardmiller.co.uk"
+        }
+    ],
+
+    "require": {
+        "php": ">=5.4",
+        "rmiller/error-extension": "~0.1",
+        "rmiller/phpspec-extension": "~0.2",
+        "rmiller/exemplify-extension": "~0.2",
+        "rmiller/phpspec-run-extension": "~0.2"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "RMiller\\BehatSpec\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}

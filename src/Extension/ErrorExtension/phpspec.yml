@@ -1,0 +1,4 @@
+suites:
+  error_extension:
+    namespace: RMiller\ErrorExtension
+    psr4_prefix: RMiller\ErrorExtension

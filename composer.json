@@ -12,18 +12,25 @@
             "homepage":  "http://richardmiller.co.uk"
         }
     ],
-
     "require": {
         "php": ">=5.4",
-        "rmiller/error-extension": "~0.1",
-        "rmiller/phpspec-extension": "~0.2",
-        "rmiller/exemplify-extension": "~0.2",
-        "rmiller/phpspec-run-extension": "~0.2"
+        "phpspec/phpspec": "^2.5",
+        "behat/behat": "~3.0,>=3.0.4"
+    },
+    "replace": {
+        "rmiller/error-extension": "^0.1.0",
+        "rmiller/phpspec-extension": "^0.2.0",
+        "rmiller/exemplify-extension": "^0.2.0",
+        "rmiller/phpspec-run-extension": "^0.2.0"
     },
 
     "autoload": {
         "psr-4": {
-            "RMiller\\BehatSpec\\": "src/"
+            "RMiller\\BehatSpecExtension\\": "src/Extension/BehatSpecExtension",
+            "RMiller\\ErrorExtension\\": "src/Extension/ErrorExtension/src",
+            "RMiller\\ExemplifyExtension\\": "src/Extension/ExemplifyExtension/src",
+            "RMiller\\PhpSpecExtension\\": "src/Extension/PhpSpecExtension/src",
+            "RMiller\\PhpSpecRunExtension\\": "src/Extension/PhpSpecRunExtension/src"
         }
     },
     "minimum-stability": "dev"

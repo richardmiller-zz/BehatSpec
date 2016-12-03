@@ -1,3 +1,5 @@
+# Managed by Composer
 /vendor/
 /composer.phar
 /composer.lock
+/bin/*
