@@ -18,10 +18,10 @@
         "behat/behat": "~3.0,>=3.0.4"
     },
     "replace": {
-        "rmiller/error-extension": "^0.1.0",
-        "rmiller/phpspec-extension": "^0.2.0",
-        "rmiller/exemplify-extension": "^0.2.0",
-        "rmiller/phpspec-run-extension": "^0.2.0"
+        "rmiller/error-extension": "^0.1",
+        "rmiller/phpspec-extension": "self.version",
+        "rmiller/exemplify-extension": "self.version",
+        "rmiller/phpspec-run-extension": "self.version"
     },
 
     "autoload": {
