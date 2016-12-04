@@ -1,13 +1,13 @@
 <?php
 
-namespace RMiller\BehatSpec;
+namespace RMiller\BehatSpecExtension;
 
-use PhpSpec\Extension\ExtensionInterface;
 use PhpSpec\ServiceContainer;
+use PhpSpec\Extension;
 use RMiller\ExemplifyExtension\ExemplifyExtension;
 use RMiller\PhpSpecRunExtension\PhpSpecRunExtension;
 
-class PhpSpecExtension implements ExtensionInterface
+class PhpSpecExtension implements Extension
 {
     private $extensions = [];
 
@@ -22,10 +22,10 @@ class PhpSpecExtension implements ExtensionInterface
     /**
      * @param ServiceContainer $container
      */
-    public function load(ServiceContainer $container)
+    public function load(ServiceContainer $container, array $params)
     {
         foreach ($this->extensions as $extension) {
-            $extension->load($container);
+            $extension->load($container, $params);
         }
 
         $params = $container->getParam('rerunner', []);
