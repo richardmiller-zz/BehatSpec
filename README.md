@@ -79,7 +79,7 @@ to be enabled for the full functionality.
 Requires:
 
 * Behat 3.0+
-* PhpSpec 2.0+
+* PhpSpec 3.0+
 * PHP 5.4+
 
 Require the extension:
@@ -109,7 +109,7 @@ Activate the PhpSpec extension by specifying its class in your `phpspec.yml`:
 ```yaml
 # phpspec.yml
 extensions:
-    - RMiller\BehatSpec\PhpSpecExtension
+    RMiller\BehatSpec\PhpSpecExtension: ~
 ```
 
 Additional configuration can be provided for the running of the `phpspec run` command:
@@ -125,7 +125,7 @@ rerunner:
     config: path/to/phpspec.yml #optional
 
 extensions:
-    - RMiller\BehatSpec\PhpSpecExtension
+    RMiller\BehatSpec\PhpSpecExtension: ~
 ```
 
 ### Some Details

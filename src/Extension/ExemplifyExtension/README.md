@@ -28,7 +28,7 @@ This can then be modified to describe the behaviour for the method.
 
 Requires:
 
-* PhpSpec 2.0+
+* PhpSpec 3.0+
 * PHP 5.4+
 
 To use 'named constructor' examples , you need to use latest phpspec 2.1@dev.
@@ -47,7 +47,7 @@ Activate the extension by specifying its class in your `phpspec.yml`:
 ```yaml
 # phpspec.yml
 extensions:
- - RMiller\ExemplifyExtension\ExemplifyExtension
+    RMiller\ExemplifyExtension\ExemplifyExtension: ~
 ```
 
 ## Method Types
@@ -78,10 +78,6 @@ public function it_should_be_constructed_through_with_name()
     $this->beConstructedThrough('withName');
 }
 ```
-
-Note that whilst the example will be created with phpspec 2.0, in order
-to successfully run it you will need to be using 2.1 as `beConstructedThrough`
-is new to 2.1.
 
 ## Other Potentially Useful Extensions
 
