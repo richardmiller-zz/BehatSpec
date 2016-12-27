@@ -1,0 +1,24 @@
+{
+    "name": "rmiller/phpspec-run-extension",
+    "type": "library",
+    "description": "PhpSpec extension to execute the run command after the describe command",
+    "keywords": ["phpspec", "bdd"],
+    "homepage": "https://github.com/richardmiller/PhpSpecRunExtension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Richard Miller",
+            "email": "mrrmiller46@gmail.com"
+        }
+    ],
+    "require": {
+        "php":             ">=5.4",
+        "phpspec/phpspec": "~2.0"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "~2.1@dev"
+    },
+    "autoload": {
+        "psr-4": { "RMiller\\PhpSpecRunExtension\\": "src/" }
+    }
+}

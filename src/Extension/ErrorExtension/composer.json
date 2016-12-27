@@ -1,0 +1,26 @@
+{
+    "name": "rmiller/error-extension",
+    "type": "behat-extension",
+    "description": "Fatal error handling extension for Behat",
+    "keywords": ["behat", "bdd"],
+    "homepage": "https://github.com/richardmiller/ErrorExtension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Richard Miller",
+            "email": "mrrmiller46@gmail.com"
+        }
+    ],
+
+    "require": {
+        "php":         ">=5.4",
+        "behat/behat": "~3.0,>=3.0.4"
+    },
+
+    "autoload": {
+        "psr-4": { "RMiller\\ErrorExtension\\": "src/" }
+    },
+    "require-dev": {
+        "phpspec/phpspec": "~2.1@dev"
+    }
+}

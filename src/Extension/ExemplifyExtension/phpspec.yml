@@ -1,0 +1,5 @@
+suites:
+  default:
+    psr4_prefix: RMiller\ExemplifyExtension
+extensions:
+  - RMiller\ExemplifyExtension\ExemplifyExtension
