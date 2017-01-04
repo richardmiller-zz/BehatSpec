@@ -3,7 +3,6 @@
 namespace Rmiller\ErrorExtension\Tester;
 
 use Behat\Testwork\Environment\Environment;
-use Behat\Testwork\Output\Printer\OutputPrinter;
 use Behat\Testwork\Specification\SpecificationIterator;
 use Behat\Testwork\Tester\Result\TestResult;
 use Behat\Testwork\Tester\Setup\Setup;
@@ -77,7 +76,7 @@ class ErrorTester implements SuiteTester
 
     private function turnOffErrorDisplayingIfNotVerbose()
     {
-        if ($this->output->getVerbosity() == OutputPrinter::VERBOSITY_NORMAL) {
+        if ($this->output->getVerbosity() === OutputInterface::OUTPUT_NORMAL) {
             error_reporting(E_ALL & ~E_ERROR);
         }
     }
