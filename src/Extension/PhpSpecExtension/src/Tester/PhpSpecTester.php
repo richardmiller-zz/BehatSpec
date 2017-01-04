@@ -75,8 +75,7 @@ class PhpSpecTester implements SuiteTester
      */
     public function setUp(Environment $env, SpecificationIterator $iterator, $skip)
     {
-        spl_autoload_register(function($class) {
-
+        spl_autoload_register(function ($class) {
             $errorMessages = [
                 $class .' was not found.'
             ];
@@ -96,7 +95,6 @@ class PhpSpecTester implements SuiteTester
                 $this->output->writeln('');
                 $this->specRunner->runDescCommand($class);
             }
-
         }, true, false);
 
         return $this->baseTester->setUp($env, $iterator, $skip);

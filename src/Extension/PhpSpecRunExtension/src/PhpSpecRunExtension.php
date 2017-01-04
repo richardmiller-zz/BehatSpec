@@ -20,7 +20,6 @@ class PhpSpecRunExtension implements ExtensionInterface
     public function load(ServiceContainer $container)
     {
         $container->setShared('rmiller.run_runner', function ($c) {
-
             $params = $c->getParam('rerunner', []);
             $phpspecPath = isset($params['path']) ? $params['path'] : 'bin/phpspec';
             $phpspecConfig = isset($params['config']) ? $params['config'] : null;

@@ -8,7 +8,7 @@ class ErrorObservers implements \IteratorAggregate
 
     public function __construct(array $observers = [])
     {
-        foreach($observers as $observer) {
+        foreach ($observers as $observer) {
             if ($observer instanceof ErrorObserver) {
                 continue;
             }

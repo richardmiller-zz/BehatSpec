@@ -14,7 +14,8 @@ class PassthruCommandRunner implements CommandRunner
     /**
      * @param CliFunctionChecker $functionChecker
      */
-    public function __construct(CliFunctionChecker $functionChecker) {
+    public function __construct(CliFunctionChecker $functionChecker)
+    {
         $this->functionChecker = $functionChecker;
     }
 

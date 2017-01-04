@@ -27,7 +27,6 @@ class FeatureContext implements Context, SnippetAcceptingContext
      */
     public function createWorkDir()
     {
-
         $this->workDir = sprintf(
             '%s/%s/',
             sys_get_temp_dir(),
@@ -84,7 +83,7 @@ class FeatureContext implements Context, SnippetAcceptingContext
      */
     private function createApplicationTester()
     {
-        file_put_contents('phpspec.yml','extensions: [RMiller\ExemplifyExtension\ExemplifyExtension]');
+        file_put_contents('phpspec.yml', 'extensions: [RMiller\ExemplifyExtension\ExemplifyExtension]');
         $application = new Application('2.1-dev');
         $application->setAutoExit(false);
 
