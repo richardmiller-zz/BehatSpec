@@ -9,7 +9,7 @@
             <argument/>
             <argument type="service" id="cli.output"/>
             <argument type="collection" />
-            <tag name="tester.suite.wrapper" priority="-9999"/>
+            <tag name="tester.step.wrapper" priority="-9999"/>
         </service>
 
     </services>
