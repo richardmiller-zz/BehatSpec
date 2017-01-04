@@ -4,7 +4,6 @@ use Behat\Behat\Tester\Exception\PendingException;
 use Behat\Behat\Context\Context;
 use Behat\Behat\Context\SnippetAcceptingContext;
 use Behat\Gherkin\Node\PyStringNode;
-use Console\ApplicationTester;
 use PhpSpec\Console\Application;
 use Symfony\Component\Filesystem\Filesystem;
 
