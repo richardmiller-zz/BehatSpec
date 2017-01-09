@@ -7,6 +7,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Console\Question\ChoiceQuestion;
 
 class ExemplifyCommand extends Command
 {
@@ -54,7 +55,7 @@ EOF
 
         $container->get('code_generator')->generate($resource, 'specification_method', [
             'method' => $method,
-            'type' => $this->confirmMethodType($output),
+            'type' => $this->confirmMethodType($input, $output),
         ]);
     }
 
@@ -79,16 +80,18 @@ EOF
     /**
      * @param OutputInterface $output
      */
-    private function confirmMethodType(OutputInterface $output)
+    private function confirmMethodType(InputInterface $input, OutputInterface $output)
     {
         $formattedMethodTypes = ['instance method','named constructor', 'static method'];
-        $methodTypes = ['instance-method', 'named-constructor', 'static-method'];
 
-        return $methodTypes[$this->getHelper('dialog')->select(
+        return str_replace(' ', '-', $this->getHelper('question')->ask(
+            $input,
             $output,
-            'Please select the method type (defaults to instance method)',
-            $formattedMethodTypes,
-            0
-        )];
+            new ChoiceQuestion(
+                'Please select the method type (defaults to instance method)',
+                $formattedMethodTypes,
+                0
+            )
+        ));
     }
 }
