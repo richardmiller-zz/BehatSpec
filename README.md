@@ -85,8 +85,10 @@ Requires:
 Require the extension:
 
 ```
-$ composer require --dev rmiller/behat-spec:^0.4
+$ composer require --dev rmiller/behat-spec:^0.5
 ```
+
+If you want to use `BehatSpec` with PhpSpec 2.0+, you MUST use [0.4.0](https://github.com/richardmiller/BehatSpec/tree/0.4.0).
 
 To get the phpspec run command running, you need to use latest phpspec 2.1@dev.
 Otherwise that functionality will silently fail.

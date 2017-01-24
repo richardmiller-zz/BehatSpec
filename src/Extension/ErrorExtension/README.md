@@ -26,7 +26,7 @@ This extension requires:
 The easiest way to install it is to use Composer
 
 ```
-$ composer require --dev rmiller/error-extension:^0.4
+$ composer require --dev rmiller/error-extension:^0.5
 ```
 
 Activate the extension by specifying its class in your ``behat.yml``:

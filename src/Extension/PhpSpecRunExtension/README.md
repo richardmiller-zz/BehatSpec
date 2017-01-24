@@ -17,7 +17,7 @@ This extension requires:
 The easiest way to install it is to use Composer
 
 ```
-$ composer require --dev rmiller/phpspec-run-extension:^0.4
+$ composer require --dev rmiller/phpspec-run-extension:^0.5
 ```
 
 Activate the extension by specifying its class in your ``phpspec.yml``:
