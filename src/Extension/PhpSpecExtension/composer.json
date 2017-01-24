@@ -14,17 +14,17 @@
 
     "require": {
         "php":             ">=5.4",
-        "behat/behat":     "~3.0,>=3.0.4",
-        "phpspec/phpspec": "~2.0",
-        "symfony/process": "~2.1|~3.0"
+        "behat/behat":     "^3.0,>=3.0.4",
+        "phpspec/phpspec": "^2.0",
+        "symfony/process": "^2.1|^3.0"
     },
     "require-dev": {
-        "rmiller/error-extension": "~0.1",
-        "rmiller/exemplify-extension": "~0.1"
+        "rmiller/error-extension": "^0.4",
+        "rmiller/exemplify-extension": "^0.4"
     },
     "suggests": {
-        "rmiller/error-extension": "~0.1",
-        "rmiller/exemplify-extension": "~0.1"
+        "rmiller/error-extension": "^0.4",
+        "rmiller/exemplify-extension": "^0.4"
     },
     "autoload": {
         "psr-4": { "RMiller\\PhpSpecExtension\\": "src/" }

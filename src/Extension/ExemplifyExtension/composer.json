@@ -13,8 +13,8 @@
     ],
     "require": {
         "php":             ">=5.4",
-        "phpspec/phpspec": "~2.1.1",
-        "rmiller/caser":   "~0.1"
+        "phpspec/phpspec": "^2.1.1",
+        "rmiller/caser":   "^0.1"
     },
     "require-dev": {
         "behat/behat": "~3.0",
