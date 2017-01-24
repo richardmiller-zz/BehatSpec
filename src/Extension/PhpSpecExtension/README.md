@@ -20,7 +20,7 @@ If you do want to use this extension standalone, it requires:
 The easiest way to install it is to use Composer
 
 ```
-$ composer require --dev rmiller/phpspec-extension:dev-master
+$ composer require --dev rmiller/phpspec-extension:^0.4
 ```
 
 Activate the extension by specifying its class in your ``behat.yml``:

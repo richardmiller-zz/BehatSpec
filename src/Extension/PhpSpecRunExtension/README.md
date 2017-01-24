@@ -24,7 +24,7 @@ dependencies
 The easiest way to install it is to use Composer
 
 ```
-$ composer require --dev rmiller/phpspec-run-extension:~0.1
+$ composer require --dev rmiller/phpspec-run-extension:^0.4
 ```
 
 Activate the extension by specifying its class in your ``phpspec.yml``:

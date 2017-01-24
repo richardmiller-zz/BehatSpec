@@ -37,7 +37,7 @@ Otherwise the examples will be created but will not run.
 Require the extension:
 
 ```
-$ composer require --dev rmiller/exemplify-extension:~0.2
+$ composer require --dev rmiller/exemplify-extension:^0.4
 ```
 
 ## Configuration
