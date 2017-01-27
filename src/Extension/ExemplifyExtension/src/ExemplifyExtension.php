@@ -2,27 +2,28 @@
 
 namespace RMiller\ExemplifyExtension;
 
-use PhpSpec\Extension\ExtensionInterface;
+use PhpSpec\Extension;
 use PhpSpec\ServiceContainer;
 use RMiller\ExemplifyExtension\Command\ExemplifyCommand;
 use RMiller\ExemplifyExtension\Generator\SpecificationMethodGenerator;
 
-class ExemplifyExtension implements ExtensionInterface
+class ExemplifyExtension implements Extension
 {
     /**
      * @param ServiceContainer $container
+     * @param array $params
      */
-    public function load(ServiceContainer $container)
+    public function load(ServiceContainer $container, array $params)
     {
-        $container->set('code_generator.generators.specification_method', function (ServiceContainer $c) {
+        $container->define('code_generator.generators.specification_method', function (ServiceContainer $c) {
             return new SpecificationMethodGenerator(
                 $c->get('console.io'),
                 $c->get('code_generator.templates')
             );
-        });
+        }, ['code_generator.generators']);
 
-        $container->setShared('console.commands.exemplify', function () {
+        $container->define('console.commands.exemplify', function () {
             return new ExemplifyCommand();
-        });
+        }, ['console.commands']);
     }
 }

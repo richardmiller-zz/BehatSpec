@@ -2,7 +2,7 @@
 
 namespace RMiller\PhpSpecRunExtension;
 
-use PhpSpec\Console\IO;
+use PhpSpec\Console\ConsoleIO;
 use RMiller\PhpSpecRunExtension\Process\RunRunner\CompositeRunRunner;
 use Symfony\Component\Console\ConsoleEvents;
 use Symfony\Component\Console\Event\ConsoleTerminateEvent;
@@ -14,7 +14,7 @@ class CommandSubscriber implements EventSubscriberInterface
     private $commands;
     private $io;
 
-    public function __construct(CompositeRunRunner $runRunner, IO $io, array $commands)
+    function __construct(CompositeRunRunner $runRunner, ConsoleIO $io, array $commands)
     {
         $this->runRunner = $runRunner;
         $this->commands = $commands;

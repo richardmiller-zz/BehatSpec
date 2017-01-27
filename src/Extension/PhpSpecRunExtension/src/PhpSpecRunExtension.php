@@ -2,7 +2,7 @@
 
 namespace RMiller\PhpSpecRunExtension;
 
-use PhpSpec\Extension\ExtensionInterface;
+use PhpSpec\Extension;
 use PhpSpec\ServiceContainer;
 use RMiller\PhpSpecRunExtension\Process\CachingExecutableFinder;
 use RMiller\PhpSpecRunExtension\Process\CommandRunner\CliFunctionChecker;
@@ -12,14 +12,16 @@ use RMiller\PhpSpecRunExtension\Process\RunRunner\CompositeRunRunner;
 use RMiller\PhpSpecRunExtension\Process\RunRunner\PlatformSpecificRunRunner;
 use Symfony\Component\Process\PhpExecutableFinder;
 
-class PhpSpecRunExtension implements ExtensionInterface
+class PhpSpecRunExtension implements Extension
 {
     /**
      * @param ServiceContainer $container
+     * @param array $params
      */
-    public function load(ServiceContainer $container)
+    public function load(ServiceContainer $container, array $params)
     {
-        $container->setShared('rmiller.run_runner', function ($c) {
+        $container->define('rmiller.run_runner', function ($c) {
+
             $params = $c->getParam('rerunner', []);
             $phpspecPath = isset($params['path']) ? $params['path'] : 'bin/phpspec';
             $phpspecConfig = isset($params['config']) ? $params['config'] : null;
@@ -40,15 +42,15 @@ class PhpSpecRunExtension implements ExtensionInterface
             ]);
         });
 
-        $container->setShared('rmiller.run.function_checker', function ($c) {
+        $container->define('rmiller.run.function_checker', function ($c) {
             return new CliFunctionChecker($c->get('rmiller.run.caching_executable_finder'));
         });
 
-        $container->setShared('rmiller.run.caching_executable_finder', function () {
+        $container->define('rmiller.run.caching_executable_finder', function () {
             return new CachingExecutableFinder(new PhpExecutableFinder());
         });
 
-        $container->setShared('console_event_dispatcher.listeners.run_runner', function ($c) {
+        $container->define('console_event_dispatcher.listeners.run_runner', function ($c) {
             $params = $c->getParam('rerunner', []);
             $commands = isset($params['commands']) ? $params['commands'] : ['describe'];
 
@@ -57,6 +59,6 @@ class PhpSpecRunExtension implements ExtensionInterface
                 $c->get('console.io'),
                 $commands
             );
-        });
+        }, ['console_event_dispatcher.listeners']);
     }
 }

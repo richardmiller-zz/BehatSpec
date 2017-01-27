@@ -11,20 +11,19 @@
             "email": "mrrmiller46@gmail.com"
         }
     ],
-
     "require": {
         "php":             ">=5.4",
         "behat/behat":     "^3.0,>=3.0.4",
-        "phpspec/phpspec": "^2.0",
+        "phpspec/phpspec": "^3.0",
         "symfony/process": "^2.1|^3.0"
     },
     "require-dev": {
-        "rmiller/error-extension": "^0.4",
-        "rmiller/exemplify-extension": "^0.4"
+        "rmiller/error-extension": "^0.5",
+        "rmiller/exemplify-extension": "^0.5"
     },
     "suggests": {
-        "rmiller/error-extension": "^0.4",
-        "rmiller/exemplify-extension": "^0.4"
+        "rmiller/error-extension": "^0.5",
+        "rmiller/exemplify-extension": "^0.5"
     },
     "autoload": {
         "psr-4": { "RMiller\\PhpSpecExtension\\": "src/" }
