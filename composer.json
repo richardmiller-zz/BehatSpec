@@ -15,10 +15,10 @@
 
     "require": {
         "php": ">=5.4",
-        "rmiller/error-extension": "~0.1",
-        "rmiller/phpspec-extension": "~0.2",
-        "rmiller/exemplify-extension": "~0.2",
-        "rmiller/phpspec-run-extension": "~0.2"
+        "rmiller/error-extension": "~0.1||<0.4",
+        "rmiller/phpspec-extension": "~0.2||<0.4",
+        "rmiller/exemplify-extension": "~0.2||<0.4",
+        "rmiller/phpspec-run-extension": "~0.2||<0.4"
     },
 
     "autoload": {
