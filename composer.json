@@ -35,5 +35,5 @@
             "RMiller\\PhpSpecRunExtension\\": "src/Extension/PhpSpecRunExtension/src"
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "stable"
 }
