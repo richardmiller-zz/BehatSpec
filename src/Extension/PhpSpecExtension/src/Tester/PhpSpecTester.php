@@ -1,6 +1,6 @@
 <?php
 
-namespace RMiller\PhpSpecExtension\Tester;
+namespace RMiller\BehatSpec\Extension\PhpSpecExtension\Tester;
 
 use Behat\Testwork\Environment\Environment;
 use Behat\Testwork\Specification\SpecificationIterator;

@@ -1,10 +1,10 @@
 <?php
 
-namespace RMiller\PhpSpecExtension\Process\DescRunner;
+namespace RMiller\BehatSpec\Extension\PhpSpecExtension\Process\DescRunner;
 
-use RMiller\PhpSpecExtension\Process\CachingExecutableFinder;
-use RMiller\PhpSpecExtension\Process\CommandRunner;
-use RMiller\PhpSpecExtension\Process\DescRunner;
+use RMiller\BehatSpec\Extension\PhpSpecExtension\Process\CachingExecutableFinder;
+use RMiller\BehatSpec\Extension\PhpSpecExtension\Process\CommandRunner;
+use RMiller\BehatSpec\Extension\PhpSpecExtension\Process\DescRunner;
 
 class PlatformSpecificDescRunner implements DescRunner
 {

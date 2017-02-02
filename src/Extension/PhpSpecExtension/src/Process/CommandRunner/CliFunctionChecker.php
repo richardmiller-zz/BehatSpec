@@ -1,8 +1,8 @@
 <?php
 
-namespace RMiller\PhpSpecExtension\Process\CommandRunner;
+namespace RMiller\BehatSpec\Extension\PhpSpecExtension\Process\CommandRunner;
 
-use RMiller\PhpSpecExtension\Process\CachingExecutableFinder;
+use RMiller\BehatSpec\Extension\PhpSpecExtension\Process\CachingExecutableFinder;
 
 class CliFunctionChecker
 {

@@ -26,6 +26,6 @@
         "rmiller/exemplify-extension": "^0.5"
     },
     "autoload": {
-        "psr-4": { "RMiller\\PhpSpecExtension\\": "src/" }
+        "psr-4": { "RMiller\\BehatSpec\\Extension\\PhpSpecExtension\\": "src/" }
     }
 }
