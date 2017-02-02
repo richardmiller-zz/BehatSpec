@@ -29,7 +29,7 @@ This can then be modified to describe the behaviour for the method.
 Requires:
 
 * PhpSpec 3.0+
-* PHP 5.4+
+* PHP 5.6+
 
 To use 'named constructor' examples , you need to use latest phpspec 2.1@dev.
 Otherwise the examples will be created but will not run.
