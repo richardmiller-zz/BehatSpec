@@ -14,7 +14,7 @@ between [Behat](http://docs.behat.org/en/v3.0/) and [PhpSpec](http://phpspec.net
 If you do want to use this extension standalone, it requires:
 
 * Behat 3.0+
-* PHP 5.4+
+* PHP 5.6+
 
 
 The easiest way to install it is to use Composer
@@ -30,7 +30,7 @@ Activate the extension by specifying its class in your ``behat.yml``:
 default:
   # ...
   extensions:
-    RMiller\PhpSpecExtension\PhpSpecExtension:
+    RMiller\BehatSpec\Extension\PhpSpecExtension\PhpSpecExtension:
       path:  bin/phpspec #default value is bin/phpspec
       config:  path/to/phpspec.yml #optional
 ```
