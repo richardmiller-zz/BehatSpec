@@ -47,7 +47,7 @@ Activate the extension by specifying its class in your `phpspec.yml`:
 ```yaml
 # phpspec.yml
 extensions:
-    RMiller\ExemplifyExtension\ExemplifyExtension: ~
+    RMiller\BehatSpec\Extension\ExemplifyExtension\ExemplifyExtension: ~
 ```
 
 ## Method Types
