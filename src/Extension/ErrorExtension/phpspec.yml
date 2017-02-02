@@ -1,4 +1,4 @@
 suites:
   error_extension:
-    namespace: RMiller\ErrorExtension
-    psr4_prefix: RMiller\ErrorExtension
+    namespace: RMiller\BehatSpec\Extension\ErrorExtension
+    psr4_prefix: RMiller\BehatSpec\Extension\ErrorExtension
