@@ -12,7 +12,7 @@ Installation
 This extension requires:
 
 * PhpSpec 3.0+
-* PHP 5.4+
+* PHP 5.6+
 
 The easiest way to install it is to use Composer
 
