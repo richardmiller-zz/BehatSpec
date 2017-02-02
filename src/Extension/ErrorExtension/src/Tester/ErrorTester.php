@@ -1,6 +1,6 @@
 <?php
 
-namespace Rmiller\BehatSpec\Extension\ErrorExtension\Tester;
+namespace RMiller\BehatSpec\Extension\ErrorExtension\Tester;
 
 use Behat\Behat\Tester\Result\ExecutedStepResult;
 use Behat\Behat\Tester\Result\StepResult;

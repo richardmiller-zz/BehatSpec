@@ -7,12 +7,12 @@ use RMiller\BehatSpec\Extension\PhpSpecExtension\Process\CachingExecutableFinder
 class CliFunctionChecker
 {
     /**
-     * @var \Rmiller\PhpSpecExtension\Process\CachingExecutableFinder
+     * @var \RMiller\BehatSpec\Extension\PhpSpecExtension\Process\CachingExecutableFinder
      */
     private $executableFinder;
 
     /**
-     * @param \Rmiller\PhpSpecExtension\Process\CachingExecutableFinder $executableFinder
+     * @param \RMiller\BehatSpec\Extension\PhpSpecExtension\Process\CachingExecutableFinder $executableFinder
      */
     public function __construct(CachingExecutableFinder $executableFinder)
     {

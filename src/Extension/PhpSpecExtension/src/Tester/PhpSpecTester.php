@@ -8,7 +8,7 @@ use Behat\Testwork\Tester\Result\TestResult;
 use Behat\Testwork\Tester\Setup\Setup;
 use Behat\Testwork\Tester\Setup\Teardown;
 use Behat\Testwork\Tester\SuiteTester;
-use Rmiller\PhpSpecExtension\Process\DescRunner;
+use RMiller\BehatSpec\Extension\PhpSpecExtension\Process\DescRunner;
 use Symfony\Component\Console\Helper\QuestionHelper;
 use Symfony\Component\Console\Helper\FormatterHelper;
 use Symfony\Component\Console\Output\OutputInterface;
