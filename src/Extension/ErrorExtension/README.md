@@ -46,7 +46,7 @@ Observers can be registered for the errors to handle them in some way from anoth
 These must implement the following interface:
 
 ```php
-namespace RMiller\ErrorExtension\Observer;
+namespace RMiller\BehatSpec\Extension\ErrorExtension\Observer;
 
 interface ErrorObserver
 {
