@@ -1,11 +1,11 @@
 <?php
 
-namespace RMiller\ExemplifyExtension;
+namespace RMiller\BehatSpec\Extension\ExemplifyExtension;
 
 use PhpSpec\Extension;
 use PhpSpec\ServiceContainer;
-use RMiller\ExemplifyExtension\Command\ExemplifyCommand;
-use RMiller\ExemplifyExtension\Generator\SpecificationMethodGenerator;
+use RMiller\BehatSpec\Extension\ExemplifyExtension\Command\ExemplifyCommand;
+use RMiller\BehatSpec\Extension\ExemplifyExtension\Generator\SpecificationMethodGenerator;
 
 class ExemplifyExtension implements Extension
 {

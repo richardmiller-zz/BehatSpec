@@ -20,6 +20,6 @@
         "behat/behat": "^3.0"
     },
     "autoload": {
-        "psr-4": { "RMiller\\ExemplifyExtension\\": "src/" }
+        "psr-4": { "RMiller\\BehatSpec\\Extension\\ExemplifyExtension\\": "src/" }
     }
 }

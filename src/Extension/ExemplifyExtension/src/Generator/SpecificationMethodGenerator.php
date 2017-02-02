@@ -1,6 +1,6 @@
 <?php
 
-namespace RMiller\ExemplifyExtension\Generator;
+namespace RMiller\BehatSpec\Extension\ExemplifyExtension\Generator;
 
 use PhpSpec\CodeGenerator\Generator\Generator;
 use PhpSpec\Console\ConsoleIO;

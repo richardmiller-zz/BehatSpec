@@ -1,6 +1,6 @@
 suites:
   default:
-    namespace: RMiller\ExemplifyExtension
-    psr4_prefix: RMiller\ExemplifyExtension
+    namespace: RMiller\BehatSpec\Extension\ExemplifyExtension
+    psr4_prefix: RMiller\BehatSpec\Extension\ExemplifyExtension
 extensions:
-    RMiller\ExemplifyExtension\ExemplifyExtension: ~
+    RMiller\BehatSpec\Extension\ExemplifyExtension\ExemplifyExtension: ~
