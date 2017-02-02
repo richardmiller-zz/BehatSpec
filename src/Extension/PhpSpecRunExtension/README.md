@@ -25,7 +25,7 @@ Activate the extension by specifying its class in your ``phpspec.yml``:
 ```yaml
 # phpspec.yml
 extensions:
-  RMiller\PhpSpecRunExtension\PhpSpecRunExtension: ~
+  RMiller\BehatSpec\Extension\PhpSpecRunExtension\PhpSpecRunExtension: ~
 ```
 
 It defaults to `bin/phpspec` for the path of phpspec and to run after the describe command.
@@ -34,7 +34,7 @@ These can be overridden as follows:
 ```yaml
 # phpspec.yml
 extensions:
-  RMiller\PhpSpecRunExtension\PhpSpecRunExtension: ~
+  RMiller\BehatSpec\Extension\PhpSpecRunExtension\PhpSpecRunExtension: ~
 rerunner:
   path: vendor/bin/phpspec
   commands: [describe, exemplify]

@@ -1,8 +1,8 @@
 <?php
 
-namespace RMiller\PhpSpecRunExtension\Process\RunRunner;
+namespace RMiller\BehatSpec\Extension\PhpSpecRunExtension\Process\RunRunner;
 
-use RMiller\PhpSpecRunExtension\Process\RunRunner;
+use RMiller\BehatSpec\Extension\PhpSpecRunExtension\Process\RunRunner;
 
 class CompositeRunRunner implements RunRunner
 {

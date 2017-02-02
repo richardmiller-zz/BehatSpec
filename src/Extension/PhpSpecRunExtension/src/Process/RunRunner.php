@@ -1,6 +1,6 @@
 <?php
 
-namespace RMiller\PhpSpecRunExtension\Process;
+namespace RMiller\BehatSpec\Extension\PhpSpecRunExtension\Process;
 
 interface RunRunner
 {
