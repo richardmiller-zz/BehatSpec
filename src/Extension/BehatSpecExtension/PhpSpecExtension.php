@@ -1,11 +1,11 @@
 <?php
 
-namespace RMiller\BehatSpecExtension;
+namespace RMiller\BehatSpec\Extension\BehatSpecExtension;
 
 use PhpSpec\ServiceContainer;
 use PhpSpec\Extension;
-use RMiller\ExemplifyExtension\ExemplifyExtension;
-use RMiller\PhpSpecRunExtension\PhpSpecRunExtension;
+use RMiller\BehatSpec\Extension\ExemplifyExtension\ExemplifyExtension;
+use RMiller\BehatSpec\Extension\PhpSpecRunExtension\PhpSpecRunExtension;
 
 class PhpSpecExtension implements Extension
 {
