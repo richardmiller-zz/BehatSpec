@@ -13,7 +13,7 @@
         }
     ],
     "require": {
-        "php": ">=5.4",
+        "php": ">=5.6",
         "phpspec/phpspec": "^3.0",
         "behat/behat": "^3.0,>=3.0.4",
         "rmiller/caser": "^0.1"
@@ -25,14 +25,13 @@
         "rmiller/exemplify-extension": "self.version",
         "rmiller/phpspec-run-extension": "self.version"
     },
-
     "autoload": {
         "psr-4": {
-            "RMiller\\BehatSpecExtension\\": "src/Extension/BehatSpecExtension",
-            "RMiller\\ErrorExtension\\": "src/Extension/ErrorExtension/src",
-            "RMiller\\ExemplifyExtension\\": "src/Extension/ExemplifyExtension/src",
-            "RMiller\\PhpSpecExtension\\": "src/Extension/PhpSpecExtension/src",
-            "RMiller\\PhpSpecRunExtension\\": "src/Extension/PhpSpecRunExtension/src"
+            "RMiller\\BehatSpec\\": "src/",
+            "RMiller\\BehatSpec\\Extension\\ErrorExtension\\": "src/Extension/ErrorExtension/src",
+            "RMiller\\BehatSpec\\Extension\\ExemplifyExtension\\": "src/Extension/ExemplifyExtension/src",
+            "RMiller\\BehatSpec\\Extension\\PhpSpecExtension\\": "src/Extension/PhpSpecExtension/src",
+            "RMiller\\BehatSpec\\Extension\\PhpSpecRunExtension\\": "src/Extension/PhpSpecRunExtension/src"
         }
     },
     "minimum-stability": "stable"
