@@ -18,7 +18,7 @@
     },
 
     "autoload": {
-        "psr-4": { "RMiller\\ErrorExtension\\": "src/" }
+        "psr-4": { "RMiller\\BehatSpec\\Extension\\ErrorExtension\\": "src/" }
     },
     "require-dev": {
         "phpspec/phpspec": "~2.1@dev"
