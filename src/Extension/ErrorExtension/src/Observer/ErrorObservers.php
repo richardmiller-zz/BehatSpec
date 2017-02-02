@@ -1,6 +1,6 @@
 <?php
 
-namespace RMiller\ErrorExtension\Observer;
+namespace RMiller\BehatSpec\Extension\ErrorExtension\Observer;
 
 class ErrorObservers implements \IteratorAggregate
 {

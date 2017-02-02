@@ -1,6 +1,6 @@
 <?php
 
-namespace RMiller\ErrorExtension;
+namespace RMiller\BehatSpec\Extenstion\ErrorExtension;
 
 use Behat\Testwork\ServiceContainer\Extension as ExtensionInterface;
 use Behat\Testwork\ServiceContainer\ExtensionManager;
