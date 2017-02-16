@@ -1,6 +1,6 @@
 <?php
 
-namespace Rmiller\ErrorExtension\Tester;
+namespace RMiller\BehatSpec\Extension\ErrorExtension\Tester;
 
 use Behat\Behat\Tester\Result\ExecutedStepResult;
 use Behat\Behat\Tester\Result\StepResult;
@@ -11,7 +11,7 @@ use Behat\Testwork\Call\Exception\FatalThrowableError;
 use Behat\Testwork\Environment\Environment;
 use Behat\Testwork\Tester\Setup\Setup;
 use Behat\Testwork\Tester\Setup\Teardown;
-use RMiller\ErrorExtension\Observer\ErrorObservers;
+use RMiller\BehatSpec\Extension\ErrorExtension\Observer\ErrorObservers;
 use Symfony\Component\Console\Helper\FormatterHelper;
 use Symfony\Component\Console\Output\OutputInterface;
 

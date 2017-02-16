@@ -5,7 +5,7 @@
 
     <services>
 
-        <service id="rmiller.error_extension.error_tester" class="RMiller\ErrorExtension\Tester\ErrorTester">
+        <service id="rmiller.error_extension.error_tester" class="RMiller\BehatSpec\Extension\ErrorExtension\Tester\ErrorTester">
             <argument/>
             <argument type="service" id="cli.output"/>
             <argument type="collection" />

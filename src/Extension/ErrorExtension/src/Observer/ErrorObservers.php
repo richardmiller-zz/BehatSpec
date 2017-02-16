@@ -1,6 +1,6 @@
 <?php
 
-namespace RMiller\ErrorExtension\Observer;
+namespace RMiller\BehatSpec\Extension\ErrorExtension\Observer;
 
 class ErrorObservers implements \IteratorAggregate
 {
@@ -13,7 +13,7 @@ class ErrorObservers implements \IteratorAggregate
                 continue;
             }
 
-            $message = 'Can only be constructed with implementations of RMiller\ErrorExtension\Observer\ErrorObserver';
+            $message = 'Can only be constructed with implementations of RMiller\BehatSpec\Extension\ErrorExtension\Observer\ErrorObserver';
             throw new \InvalidArgumentException($message);
         }
 

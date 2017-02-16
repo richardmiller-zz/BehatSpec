@@ -1,9 +1,9 @@
 <?php
 
-namespace RMiller\PhpSpecRunExtension;
+namespace RMiller\BehatSpec\Extension\PhpSpecRunExtension;
 
 use PhpSpec\Console\ConsoleIO;
-use RMiller\PhpSpecRunExtension\Process\RunRunner\CompositeRunRunner;
+use RMiller\BehatSpec\Extension\PhpSpecRunExtension\Process\RunRunner\CompositeRunRunner;
 use Symfony\Component\Console\ConsoleEvents;
 use Symfony\Component\Console\Event\ConsoleTerminateEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;

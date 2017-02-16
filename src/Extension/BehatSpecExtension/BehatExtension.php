@@ -1,11 +1,11 @@
 <?php
 
-namespace RMiller\BehatSpecExtension;
+namespace RMiller\BehatSpec\Extension\BehatSpecExtension;
 
 use Behat\Testwork\ServiceContainer\Extension;
 use Behat\Testwork\ServiceContainer\ExtensionManager;
-use RMiller\ErrorExtension\ErrorExtension;
-use RMiller\PhpSpecExtension\PhpSpecExtension as BehatPhpSpecExtension;
+use RMiller\BehatSpec\Extension\ErrorExtension\ErrorExtension;
+use RMiller\BehatSpec\Extension\PhpSpecExtension\PhpSpecExtension as BehatPhpSpecExtension;
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 

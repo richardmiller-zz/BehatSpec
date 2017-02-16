@@ -1,6 +1,6 @@
 <?php
 
-namespace RMiller\PhpSpecExtension\Process;
+namespace RMiller\BehatSpec\Extension\PhpSpecExtension\Process;
 
 interface CommandRunner
 {

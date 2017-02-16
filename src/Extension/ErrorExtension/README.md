@@ -36,7 +36,7 @@ Activate the extension by specifying its class in your ``behat.yml``:
 default:
   # ...
   extensions:
-    RMiller\ErrorExtension\ErrorExtension: ~
+    RMiller\BehatSpec\Extension\ErrorExtension\ErrorExtension: ~
 ```
 
 Error Observers
@@ -46,7 +46,7 @@ Observers can be registered for the errors to handle them in some way from anoth
 These must implement the following interface:
 
 ```php
-namespace RMiller\ErrorExtension\Observer;
+namespace RMiller\BehatSpec\Extension\ErrorExtension\Observer;
 
 interface ErrorObserver
 {

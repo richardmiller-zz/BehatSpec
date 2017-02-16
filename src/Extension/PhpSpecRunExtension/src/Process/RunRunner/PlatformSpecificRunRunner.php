@@ -1,10 +1,10 @@
 <?php
 
-namespace RMiller\PhpSpecRunExtension\Process\RunRunner;
+namespace RMiller\BehatSpec\Extension\PhpSpecRunExtension\Process\RunRunner;
 
-use RMiller\PhpSpecRunExtension\Process\CachingExecutableFinder;
-use RMiller\PhpSpecRunExtension\Process\CommandRunner;
-use RMiller\PhpSpecRunExtension\Process\RunRunner;
+use RMiller\BehatSpec\Extension\PhpSpecRunExtension\Process\CachingExecutableFinder;
+use RMiller\BehatSpec\Extension\PhpSpecRunExtension\Process\CommandRunner;
+use RMiller\BehatSpec\Extension\PhpSpecRunExtension\Process\RunRunner;
 
 class PlatformSpecificRunRunner implements RunRunner
 {

@@ -80,7 +80,7 @@ Requires:
 
 * Behat 3.0+
 * PhpSpec 3.0+
-* PHP 5.4+
+* PHP 5.6+
 
 Require the extension:
 
@@ -88,9 +88,13 @@ Require the extension:
 $ composer require --dev rmiller/behat-spec:^0.5
 ```
 
-If you want to use `BehatSpec` with PhpSpec 2.0+, you MUST use [0.4.0](https://github.com/richardmiller/BehatSpec/tree/0.4.0).
+In order to use `BehatSpec` with PHPSpec 2.0 series, use `0.3.*` version series:
 
-To get the phpspec run command running, you need to use latest phpspec 2.1@dev.
+```bash
+$ composer require --dev rmiller/behat-spec:0.3.*
+```
+
+To get the phpspec run command running, you need to use latest phpspec >2.1.
 Otherwise that functionality will silently fail.
 
 ### Configuration
@@ -101,17 +105,17 @@ Activate the Behat extension by specifying its class in your `behat.yml`:
 # behat.yml
 # ...
 extensions:
-    RMiller\BehatSpec\BehatExtension:
+    RMiller\BehatSpec\Extension\BehatSpecExtension\BehatExtension:
         path:  bin/phpspec #default value is bin/phpspec
         config:  path/to/phpspec.yml #optional
-```     
+```
 
 Activate the PhpSpec extension by specifying its class in your `phpspec.yml`:
 
 ```yaml
 # phpspec.yml
 extensions:
-    RMiller\BehatSpec\PhpSpecExtension: ~
+    RMiller\BehatSpec\Extension\BehatSpecExtension\PhpSpecExtension: ~
 ```
 
 Additional configuration can be provided for the running of the `phpspec run` command:
@@ -127,7 +131,7 @@ rerunner:
     config: path/to/phpspec.yml #optional
 
 extensions:
-    RMiller\BehatSpec\PhpSpecExtension: ~
+    RMiller\BehatSpec\Extension\BehatSpecExtension\PhpSpecExtension: ~
 ```
 
 ### Some Details

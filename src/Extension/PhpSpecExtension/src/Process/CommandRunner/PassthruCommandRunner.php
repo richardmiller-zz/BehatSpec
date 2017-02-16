@@ -1,8 +1,8 @@
 <?php
 
-namespace RMiller\PhpSpecExtension\Process\CommandRunner;
+namespace RMiller\BehatSpec\Extension\PhpSpecExtension\Process\CommandRunner;
 
-use RMiller\PhpSpecExtension\Process\CommandRunner;
+use RMiller\BehatSpec\Extension\PhpSpecExtension\Process\CommandRunner;
 
 class PassthruCommandRunner implements CommandRunner
 {

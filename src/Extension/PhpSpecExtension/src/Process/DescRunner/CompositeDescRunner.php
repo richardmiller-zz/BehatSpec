@@ -1,8 +1,8 @@
 <?php
 
-namespace RMiller\PhpSpecExtension\Process\DescRunner;
+namespace RMiller\BehatSpec\Extension\PhpSpecExtension\Process\DescRunner;
 
-use RMiller\PhpSpecExtension\Process\DescRunner;
+use RMiller\BehatSpec\Extension\PhpSpecExtension\Process\DescRunner;
 
 class CompositeDescRunner implements DescRunner
 {

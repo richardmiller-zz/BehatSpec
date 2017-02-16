@@ -1,18 +1,18 @@
 <?php
 
-namespace RMiller\PhpSpecRunExtension\Process\CommandRunner;
+namespace RMiller\BehatSpec\Extension\PhpSpecRunExtension\Process\CommandRunner;
 
-use RMiller\PhpSpecRunExtension\Process\CachingExecutableFinder;
+use RMiller\BehatSpec\Extension\PhpSpecRunExtension\Process\CachingExecutableFinder;
 
 class CliFunctionChecker
 {
     /**
-     * @var \Rmiller\PhpSpecRunExtension\Process\CachingExecutableFinder
+     * @var \RMiller\BehatSpec\Extension\PhpSpecRunExtension\Process\CachingExecutableFinder
      */
     private $executableFinder;
 
     /**
-     * @param \Rmiller\PhpSpecRunExtension\Process\CachingExecutableFinder $executableFinder
+     * @param \RMiller\BehatSpec\Extension\PhpSpecRunExtension\Process\CachingExecutableFinder $executableFinder
      */
     public function __construct(CachingExecutableFinder $executableFinder)
     {

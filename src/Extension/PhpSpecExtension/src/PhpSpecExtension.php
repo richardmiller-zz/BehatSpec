@@ -1,6 +1,6 @@
 <?php
 
-namespace RMiller\PhpSpecExtension;
+namespace RMiller\BehatSpec\Extension\PhpSpecExtension;
 
 use Behat\Testwork\ServiceContainer\Extension as ExtensionInterface;
 use Behat\Testwork\ServiceContainer\ExtensionManager;

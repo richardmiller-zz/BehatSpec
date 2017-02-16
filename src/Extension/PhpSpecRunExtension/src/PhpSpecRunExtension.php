@@ -1,15 +1,15 @@
 <?php
 
-namespace RMiller\PhpSpecRunExtension;
+namespace RMiller\BehatSpec\Extension\PhpSpecRunExtension;
 
 use PhpSpec\Extension;
 use PhpSpec\ServiceContainer;
-use RMiller\PhpSpecRunExtension\Process\CachingExecutableFinder;
-use RMiller\PhpSpecRunExtension\Process\CommandRunner\CliFunctionChecker;
-use RMiller\PhpSpecRunExtension\Process\CommandRunner\PassthruCommandRunner;
-use RMiller\PhpSpecRunExtension\Process\CommandRunner\PcntlCommandRunner;
-use RMiller\PhpSpecRunExtension\Process\RunRunner\CompositeRunRunner;
-use RMiller\PhpSpecRunExtension\Process\RunRunner\PlatformSpecificRunRunner;
+use RMiller\BehatSpec\Extension\PhpSpecRunExtension\Process\CachingExecutableFinder;
+use RMiller\BehatSpec\Extension\PhpSpecRunExtension\Process\CommandRunner\CliFunctionChecker;
+use RMiller\BehatSpec\Extension\PhpSpecRunExtension\Process\CommandRunner\PassthruCommandRunner;
+use RMiller\BehatSpec\Extension\PhpSpecRunExtension\Process\CommandRunner\PcntlCommandRunner;
+use RMiller\BehatSpec\Extension\PhpSpecRunExtension\Process\RunRunner\CompositeRunRunner;
+use RMiller\BehatSpec\Extension\PhpSpecRunExtension\Process\RunRunner\PlatformSpecificRunRunner;
 use Symfony\Component\Process\PhpExecutableFinder;
 
 class PhpSpecRunExtension implements Extension

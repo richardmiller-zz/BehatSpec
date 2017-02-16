@@ -83,7 +83,7 @@ class FeatureContext implements Context, SnippetAcceptingContext
      */
     private function createApplicationTester()
     {
-        file_put_contents('phpspec.yml', 'extensions: [RMiller\ExemplifyExtension\ExemplifyExtension]');
+        file_put_contents('phpspec.yml', 'extensions: [RMiller\BehatSpec\Extension\ExemplifyExtension\ExemplifyExtension]');
         $application = new Application('2.1-dev');
         $application->setAutoExit(false);
 

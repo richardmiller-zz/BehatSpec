@@ -1,6 +1,6 @@
 <?php
 
-namespace RMiller\ExemplifyExtension\Command;
+namespace RMiller\BehatSpec\Extension\ExemplifyExtension\Command;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;

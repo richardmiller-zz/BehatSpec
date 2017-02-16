@@ -1,10 +1,10 @@
 <?php
 
-namespace RMiller\PhpSpecExtension\ErrorObserver;
+namespace RMiller\BehatSpec\Extension\PhpSpecExtension\ErrorObserver;
 
 use Behat\Testwork\Call\Exception\FatalThrowableError;
-use RMiller\ErrorExtension\Observer\ErrorObserver;
-use RMiller\PhpSpecExtension\Process\ExemplifyRunner;
+use RMiller\BehatSpec\Extension\ErrorExtension\Observer\ErrorObserver;
+use RMiller\BehatSpec\Extension\PhpSpecExtension\Process\ExemplifyRunner;
 
 class MissingMethodErrorObserver implements ErrorObserver
 {

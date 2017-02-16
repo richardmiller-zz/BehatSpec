@@ -12,7 +12,7 @@ Installation
 This extension requires:
 
 * PhpSpec 3.0+
-* PHP 5.4+
+* PHP 5.6+
 
 The easiest way to install it is to use Composer
 
@@ -25,7 +25,7 @@ Activate the extension by specifying its class in your ``phpspec.yml``:
 ```yaml
 # phpspec.yml
 extensions:
-  RMiller\PhpSpecRunExtension\PhpSpecRunExtension: ~
+  RMiller\BehatSpec\Extension\PhpSpecRunExtension\PhpSpecRunExtension: ~
 ```
 
 It defaults to `bin/phpspec` for the path of phpspec and to run after the describe command.
@@ -34,7 +34,7 @@ These can be overridden as follows:
 ```yaml
 # phpspec.yml
 extensions:
-  RMiller\PhpSpecRunExtension\PhpSpecRunExtension: ~
+  RMiller\BehatSpec\Extension\PhpSpecRunExtension\PhpSpecRunExtension: ~
 rerunner:
   path: vendor/bin/phpspec
   commands: [describe, exemplify]

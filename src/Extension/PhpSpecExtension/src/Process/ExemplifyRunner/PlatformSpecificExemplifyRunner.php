@@ -1,10 +1,10 @@
 <?php
 
-namespace RMiller\PhpSpecExtension\Process\ExemplifyRunner;
+namespace RMiller\BehatSpec\Extension\PhpSpecExtension\Process\ExemplifyRunner;
 
-use RMiller\PhpSpecExtension\Process\CachingExecutableFinder;
-use RMiller\PhpSpecExtension\Process\CommandRunner;
-use RMiller\PhpSpecExtension\Process\ExemplifyRunner;
+use RMiller\BehatSpec\Extension\PhpSpecExtension\Process\CachingExecutableFinder;
+use RMiller\BehatSpec\Extension\PhpSpecExtension\Process\CommandRunner;
+use RMiller\BehatSpec\Extension\PhpSpecExtension\Process\ExemplifyRunner;
 
 class PlatformSpecificExemplifyRunner implements ExemplifyRunner
 {

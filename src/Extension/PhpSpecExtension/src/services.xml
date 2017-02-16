@@ -7,65 +7,65 @@
 
         <service id="rmiller.phpspec_extension.executable_finder" class="Symfony\Component\Process\PhpExecutableFinder"/>
 
-        <service id="rmiller.phpspec_extension.executable_finder.caching" class="RMiller\PhpSpecExtension\Process\CachingExecutableFinder">
+        <service id="rmiller.phpspec_extension.executable_finder.caching" class="RMiller\BehatSpec\Extension\PhpSpecExtension\Process\CachingExecutableFinder">
             <argument type="service" id="rmiller.phpspec_extension.executable_finder"/>
         </service>
 
-        <service id="rmiller.phpspec_extension.function_checker" class="RMiller\PhpSpecExtension\Process\CommandRunner\CliFunctionChecker">
+        <service id="rmiller.phpspec_extension.function_checker" class="RMiller\BehatSpec\Extension\PhpSpecExtension\Process\CommandRunner\CliFunctionChecker">
             <argument type="service" id="rmiller.phpspec_extension.executable_finder.caching"/>
         </service>
 
-        <service id="rmiller.phpspec_extension.runner.pcntl" class="RMiller\PhpSpecExtension\Process\CommandRunner\PcntlCommandRunner">
+        <service id="rmiller.phpspec_extension.runner.pcntl" class="RMiller\BehatSpec\Extension\PhpSpecExtension\Process\CommandRunner\PcntlCommandRunner">
             <argument type="service" id="rmiller.phpspec_extension.function_checker"/>
         </service>
 
-        <service id="rmiller.phpspec_extension.runner.passthru" class="RMiller\PhpSpecExtension\Process\CommandRunner\PassthruCommandRunner">
+        <service id="rmiller.phpspec_extension.runner.passthru" class="RMiller\BehatSpec\Extension\PhpSpecExtension\Process\CommandRunner\PassthruCommandRunner">
             <argument type="service" id="rmiller.phpspec_extension.function_checker"/>
         </service>
 
-        <service id="rmiller.phpspec_extension.desc_runner.pcntl" class="RMiller\PhpSpecExtension\Process\DescRunner\PlatformSpecificDescRunner">
+        <service id="rmiller.phpspec_extension.desc_runner.pcntl" class="RMiller\BehatSpec\Extension\PhpSpecExtension\Process\DescRunner\PlatformSpecificDescRunner">
             <argument type="service" id="rmiller.phpspec_extension.runner.pcntl"/>
             <argument type="service" id="rmiller.phpspec_extension.executable_finder.caching"/>
             <argument>%phpspec_extension.path%</argument>
             <argument>%phpspec_extension.config%</argument>
         </service>
 
-        <service id="rmiller.phpspec_extension.desc_runner.passthru" class="RMiller\PhpSpecExtension\Process\DescRunner\PlatformSpecificDescRunner">
+        <service id="rmiller.phpspec_extension.desc_runner.passthru" class="RMiller\BehatSpec\Extension\PhpSpecExtension\Process\DescRunner\PlatformSpecificDescRunner">
             <argument type="service" id="rmiller.phpspec_extension.runner.passthru"/>
             <argument type="service" id="rmiller.phpspec_extension.executable_finder.caching"/>
             <argument>%phpspec_extension.path%</argument>
             <argument>%phpspec_extension.config%</argument>
         </service>
 
-        <service id="rmiller.phpspec_extension.desc_runner" class="RMiller\PhpSpecExtension\Process\DescRunner\CompositeDescRunner">
+        <service id="rmiller.phpspec_extension.desc_runner" class="RMiller\BehatSpec\Extension\PhpSpecExtension\Process\DescRunner\CompositeDescRunner">
             <argument type="collection">
                 <argument type="service" id="rmiller.phpspec_extension.desc_runner.pcntl"/>
                 <argument type="service" id="rmiller.phpspec_extension.desc_runner.passthru"/>
             </argument>
         </service>
 
-        <service id="rmiller.phpspec_extension.exemplify_runner.pcntl" class="RMiller\PhpSpecExtension\Process\ExemplifyRunner\PlatformSpecificExemplifyRunner">
+        <service id="rmiller.phpspec_extension.exemplify_runner.pcntl" class="RMiller\BehatSpec\Extension\PhpSpecExtension\Process\ExemplifyRunner\PlatformSpecificExemplifyRunner">
             <argument type="service" id="rmiller.phpspec_extension.runner.pcntl"/>
             <argument type="service" id="rmiller.phpspec_extension.executable_finder.caching"/>
             <argument>%phpspec_extension.path%</argument>
             <argument>%phpspec_extension.config%</argument>
         </service>
 
-        <service id="rmiller.phpspec_extension.exemplify_runner.passthru" class="RMiller\PhpSpecExtension\Process\ExemplifyRunner\PlatformSpecificExemplifyRunner">
+        <service id="rmiller.phpspec_extension.exemplify_runner.passthru" class="RMiller\BehatSpec\Extension\PhpSpecExtension\Process\ExemplifyRunner\PlatformSpecificExemplifyRunner">
             <argument type="service" id="rmiller.phpspec_extension.runner.passthru"/>
             <argument type="service" id="rmiller.phpspec_extension.executable_finder.caching"/>
             <argument>%phpspec_extension.path%</argument>
             <argument>%phpspec_extension.config%</argument>
         </service>
 
-        <service id="rmiller.phpspec_extension.exemplify_runner" class="RMiller\PhpSpecExtension\Process\ExemplifyRunner\CompositeExemplifyRunner">
+        <service id="rmiller.phpspec_extension.exemplify_runner" class="RMiller\BehatSpec\Extension\PhpSpecExtension\Process\ExemplifyRunner\CompositeExemplifyRunner">
             <argument type="collection">
                 <argument type="service" id="rmiller.phpspec_extension.exemplify_runner.pcntl"/>
                 <argument type="service" id="rmiller.phpspec_extension.exemplify_runner.passthru"/>
             </argument>
         </service>
 
-        <service id="rmiller.phpspec_extension.tester" class="RMiller\PhpSpecExtension\Tester\PhpSpecTester">
+        <service id="rmiller.phpspec_extension.tester" class="RMiller\BehatSpec\Extension\PhpSpecExtension\Tester\PhpSpecTester">
             <argument/>
             <argument type="service" id="rmiller.phpspec_extension.desc_runner"/>
             <argument type="service" id="cli.input"/>
@@ -73,7 +73,7 @@
             <tag name="tester.suite.wrapper" priority="-9999"/>
         </service>
 
-        <service id="rmiller.phpspec_extension.missing_method_observer" class="RMiller\PhpSpecExtension\ErrorObserver\MissingMethodErrorObserver">
+        <service id="rmiller.phpspec_extension.missing_method_observer" class="RMiller\BehatSpec\Extension\PhpSpecExtension\ErrorObserver\MissingMethodErrorObserver">
             <argument type="service" id="rmiller.phpspec_extension.exemplify_runner"/>
             <tag name="rmiller.error_listener"/>
         </service>

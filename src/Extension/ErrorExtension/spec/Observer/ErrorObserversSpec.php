@@ -1,10 +1,10 @@
 <?php
 
-namespace spec\RMiller\ErrorExtension\Observer;
+namespace spec\RMiller\BehatSpec\Extension\ErrorExtension\Observer;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
-use RMiller\ErrorExtension\Observer\ErrorObserver;
+use RMiller\BehatSpec\Extension\ErrorExtension\Observer\ErrorObserver;
 
 class ErrorObserversSpec extends ObjectBehavior
 {

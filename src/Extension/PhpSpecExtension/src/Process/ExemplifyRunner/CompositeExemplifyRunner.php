@@ -1,8 +1,8 @@
 <?php
 
-namespace RMiller\PhpSpecExtension\Process\ExemplifyRunner;
+namespace RMiller\BehatSpec\Extension\PhpSpecExtension\Process\ExemplifyRunner;
 
-use RMiller\PhpSpecExtension\Process\ExemplifyRunner;
+use RMiller\BehatSpec\Extension\PhpSpecExtension\Process\ExemplifyRunner;
 
 class CompositeExemplifyRunner implements ExemplifyRunner
 {
