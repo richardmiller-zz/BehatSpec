@@ -54,7 +54,6 @@ class FeatureContext implements Context, SnippetAcceptingContext
         $actual = file_get_contents($file);
         $expected = $string->getRaw();
 
-
         if($actual != $expected) {
             throw new \RuntimeException("The generated spec file should have been:\n\n$expected\n\nbut was:\n\n$actual\n\n");
         }
