@@ -82,15 +82,13 @@ EOF
      */
     private function confirmMethodType(InputInterface $input, OutputInterface $output)
     {
-        $formattedMethodTypes = ['instance method','named constructor', 'static method'];
-
         return str_replace(' ', '-', $this->getHelper('question')->ask(
             $input,
             $output,
             new ChoiceQuestion(
                 'Please select the method type (defaults to instance method)',
-                $formattedMethodTypes,
-                0
+                ['instance method','named constructor', 'static method'],
+                'instance method'
             )
         ));
     }
