@@ -66,3 +66,20 @@ This extension is used by the
 [PhpSpecExtension](https://github.com/richardmiller/PhpSpecExtension)
 to trigger running PhpSpec commands on relevant errors.
 
+## Similar Extensions
+
+* [PhpSpecExtension][10] - executes `phpspec describe` command automatically
+  for classes that are missing in `behat` ([Behat][1] extension).
+* [ExemplifyExtension][21] - adds `phpspec exemplify` command for generating
+  examples in specs ([PhpSpec][2] extension).
+- [PhpSpecRunExtension][20] - provides support of executing `phpspec run` commands automatically after `describe` (or `exemplify`) commands.
+- [BehatSpec][3] is a collection of extensions that offer integration
+  between latest stable [Behat][1] and [PhpSpec][2].
+
+[1]: http://docs.behat.org/en/stable
+[2]: http://phpspec.net/en/stable
+[3]: https://github.com/richardmiller/BehatSpec
+[10]: https://github.com/richardmiller/PhpSpecExtension
+[20]: https://github.com/richardmiller/PhpSpecRunExtension
+[21]: https://github.com/richardmiller/ExemplifyExtension
+
