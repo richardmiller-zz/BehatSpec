@@ -9,11 +9,11 @@ class ErrorObservers implements \IteratorAggregate
     public function __construct(array $observers = [])
     {
         foreach ($observers as $observer) {
-            if ($observer instanceof ErrorObserver) {
+            if ($observer instanceof ErrorObserverInterface) {
                 continue;
             }
 
-            $message = 'Can only be constructed with implementations of RMiller\BehatSpec\Extension\ErrorExtension\Observer\ErrorObserver';
+            $message = 'Can only be constructed with implementations of RMiller\BehatSpec\Extension\ErrorExtension\Observer\ErrorObserverInterface';
             throw new \InvalidArgumentException($message);
         }
 
