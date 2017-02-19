@@ -42,19 +42,23 @@ default:
 Error Observers
 ---------------
 
-Observers can be registered for the errors to handle them in some way from another Behat extension.
-These must implement the following interface:
+Observers can be registered for the errors to handle them in some way from
+another Behat extension. Observers must implement
+`RMiller\BehatSpec\Extensions\ErrorExtensions\Observer\ErrorObserverInterface`
+and be tagged with `rmiller.error_listener` tag in the service configuration.
+
+Example of a custom error observer:
 
 ```php
-namespace RMiller\BehatSpec\Extension\ErrorExtension\Observer;
+use RMiller\BehatSpec\Extension\ErrorExtension\Observer\ErrorObserverInterface;
 
-interface ErrorObserver
+class CustomErrorObserver implements ErrorObserverInterface
 {
-    public function notify(array $error);
+    public function notify(array $error) {
+        // observer notify method implementation
+    }
 }
 ```
-
-and be tagged with `rmiller.error_listener` in the service configuration.
 
 Currently this is used by the [PhpSpecExtension](https://github.com/richardmiller/PhpSpecExtension)
 to trigger running PhpSpec commands on relevant errors.

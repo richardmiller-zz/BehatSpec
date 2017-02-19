@@ -4,7 +4,7 @@ namespace spec\RMiller\BehatSpec\Extension\ErrorExtension\Observer;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
-use RMiller\BehatSpec\Extension\ErrorExtension\Observer\ErrorObserver;
+use RMiller\BehatSpec\Extension\ErrorExtension\Observer\ErrorObserverInterface;
 
 class ErrorObserversSpec extends ObjectBehavior
 {
@@ -13,7 +13,7 @@ class ErrorObserversSpec extends ObjectBehavior
         $this->shouldThrow('\InvalidArgumentException')->during('__construct', [[new \stdClass()]]);
     }
 
-    function it_can_be_constructed_with_observers(ErrorObserver $observer)
+    function it_can_be_constructed_with_observers(ErrorObserverInterface $observer)
     {
         $this->beConstructedWith([$observer]);
     }
