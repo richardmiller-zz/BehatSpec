@@ -4,3 +4,7 @@ suites:
         psr4_prefix: RMiller\BehatSpec
 extensions:
     RMiller\BehatSpec\Extension\ExemplifyExtension\ExemplifyExtension: ~
+    RMiller\BehatSpec\Extension\PhpSpecRunExtension\PhpSpecRunExtension: ~
+rerunner:
+    path: vendor/bin/phpspec
+    commands: [describe, exemplify]
