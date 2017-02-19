@@ -4,7 +4,10 @@ ErrorExtension
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/richardmiller/ErrorExtension/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/richardmiller/ErrorExtension/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/richardmiller/ErrorExtension/badges/build.png?b=master)](https://scrutinizer-ci.com/g/richardmiller/ErrorExtension/build-status/master)
 
-[Behat](http://docs.behat.org/en/v3.0/) extension to provide formatted error messages for fatal errors.
+**Note!** This is **READ-ONLY** repository. Any PRs should be based on and sent
+to [BehatSpec repository](https://github.com/richardmiller/BehatSpec).
+
+[Behat](http://docs.behat.org/en/latest/) extension to provide formatted error messages for fatal errors.
 
 This stops the large stack traces appearing on every fatal error. Instead a simpler
 formatted error showing the error message, file and line number is shown.
@@ -21,12 +24,12 @@ Installation
 This extension requires:
 
 * Behat 3.0+
-* PHP 5.4+
+* PHP 5.6+
 
-The easiest way to install it is to use Composer
+Install this extension as a development requirement in your project:
 
 ```
-$ composer require --dev rmiller/error-extension:^0.5
+$ composer require --dev rmiller/error-extension
 ```
 
 Activate the extension by specifying its class in your ``behat.yml``:
@@ -42,8 +45,12 @@ default:
 Error Observers
 ---------------
 
-Observers can be registered for the errors to handle them in some way from another Behat extension.
-These must implement the following interface:
+Observers can be registered for the errors to handle them in some way from
+another Behat extension. All the observes must implement
+`\RMiller\BehatSpec\Extension\ErrorExtension\Observer\ErrorObserver` interface
+and be tagged with `rmiller.error_listener` tag in the service configuration.
+
+An snippet of source code from the interface that you need to implement:
 
 ```php
 namespace RMiller\BehatSpec\Extension\ErrorExtension\Observer;
@@ -54,8 +61,7 @@ interface ErrorObserver
 }
 ```
 
-and be tagged with `rmiller.error_listener` in the service configuration.
-
-Currently this is used by the [PhpSpecExtension](https://github.com/richardmiller/PhpSpecExtension)
+This is used by the
+[PhpSpecExtension](https://github.com/richardmiller/PhpSpecExtension)
 to trigger running PhpSpec commands on relevant errors.
 
