@@ -38,3 +38,23 @@ default:
             path:  bin/phpspec           # default value is bin/phpspec
             config:  path/to/phpspec.yml # optional
 ```
+
+## Similar Extensions
+
+* [ErrorExtension][11] - provides formatted error messages for `behat`. This is
+  used by [PhpSpecRunExtension][20] to trigger `phpspec describe` ([Behat][1]
+  extension).
+- [PhpSpecRunExtension][20] - provides support of executing `phpspec run`
+  commands automatically after `describe` (or `exemplify`) commands.
+- [ExemplifyExtension][21] - provides `phpspec exemplify` command that can be
+  used to generate examples in specs.
+- [BehatSpec][3] is a collection of extensions that offer integration
+  between latest stable [Behat][1] and [PhpSpec][2].
+
+[1]: http://docs.behat.org/en/stable
+[2]: http://phpspec.net/en/stable
+[3]: https://github.com/richardmiller/BehatSpec
+[11]: https://github.com/richardmiller/ErrorExtension
+[20]: https://github.com/richardmiller/PhpSpecRunExtension
+[21]: https://github.com/richardmiller/ExemplifyExtension
+
