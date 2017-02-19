@@ -12,7 +12,7 @@ it's structure and any PRs for the extensions should be sent to main
 ## What
 
 Integration between [Behat](http://docs.behat.org/en/v3.0/) and
-[PhpSpec](http://phpspec.net/).
+[PhpSpec2](http://phpspec.net/en/2.5.1).
 
 * Creates specs for any missing classes encountered when running behat
 * Adds examples for any missing methods encountered when running behat
