@@ -3,12 +3,6 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/richardmiller/BehatSpec/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/richardmiller/BehatSpec/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/richardmiller/BehatSpec/badges/build.png?b=master)](https://scrutinizer-ci.com/g/richardmiller/BehatSpec/build-status/master)
 
-**Note!** This is `phpspec2-support` maintenance branch, last to support PHP
-5.4 and PhpSpec2. You should look into updating to latest supported release of
-BehatSpec (for information see `master` branch). This project has since updated
-it's structure and any PRs for the extensions should be sent to main
-[BehatSpec Repository](https://github.com/richardmiller/BehatSpec).
-
 ## What
 
 Integration between [Behat](http://docs.behat.org/en/v3.0/) and
@@ -77,9 +71,8 @@ to the class.
 
 ### Installation
 
-This package provides an extension for PhpSpec and an extension for Behat. Both need
-to be enabled for the full functionality.
-
+This package provides multiple extensions for PhpSpec and Behat that integrate
+together and need to be enabled for the full functionality.
 
 Requires:
 
@@ -87,20 +80,18 @@ Requires:
 * PhpSpec 3.0+
 * PHP 5.6+
 
-Require the extension:
+Install the extension as a development requirements in your project:
 
 ```
-$ composer require --dev rmiller/behat-spec:^0.5
+$ composer require --dev rmiller/behat-spec
 ```
 
-In order to use `BehatSpec` with PHPSpec 2.0 series, use `0.3.*` version series:
+In order to use `BehatSpec` with PHPSpec 2.0 series and PHP 5.4, use `0.3.*`
+version series:
 
 ```bash
 $ composer require --dev rmiller/behat-spec:0.3.*
 ```
-
-To get the phpspec run command running, you need to use latest phpspec >2.1.
-Otherwise that functionality will silently fail.
 
 ### Configuration
 
@@ -139,10 +130,9 @@ extensions:
     RMiller\BehatSpec\Extension\BehatSpecExtension\PhpSpecExtension: ~
 ```
 
-### Some Details
+### Extensions
 
-This package pulls together some other PhpSpec and Behat extensions which can also be used
-standalone:
+The provided by this package can also be used standalone:
 
 #### PhpSpec
 
