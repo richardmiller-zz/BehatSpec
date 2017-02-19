@@ -13,7 +13,7 @@ class ErrorObservers implements \IteratorAggregate
                 continue;
             }
 
-            $message = 'Can only be constructed with implementations of RMiller\BehatSpec\Extension\ErrorExtension\Observer\ErrorObserverInterface';
+            $message = 'Can only be constructed with implementations of ' . ErrorObserverInterface::class;
             throw new \InvalidArgumentException($message);
         }
 
