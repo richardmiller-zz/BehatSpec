@@ -1,4 +1,0 @@
-suites:
-  error_extension:
-    namespace: RMiller\BehatSpec\Extension\ErrorExtension
-    psr4_prefix: RMiller\BehatSpec\Extension\ErrorExtension
