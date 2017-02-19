@@ -28,7 +28,6 @@
     "autoload": {
         "psr-4": {
             "RMiller\\BehatSpec\\": "src",
-            "RMiller\\BehatSpec\\Extension\\PhpSpecExtension\\": "src/Extension/PhpSpecExtension/src",
             "RMiller\\BehatSpec\\Extension\\PhpSpecRunExtension\\": "src/Extension/PhpSpecRunExtension/src"
         }
     },
