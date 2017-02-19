@@ -15,7 +15,7 @@ This integration is done by the extensions that can also be used standalone:
 * [PhpSpecExtension][10] - executes `phpspec describe` command automatically
   for classes that are missing in `behat` ([Behat][1] extension).
 * [ErrorExtension][11] - provides formatted error messages for `behat`. This is
-  used by [PhpSpecRunExtension] to trigger `phpspec describe` ([Behat][1]
+  used by [PhpSpecRunExtension][20] to trigger `phpspec describe` ([Behat][1]
   extension).
 * [PhpSpecRunExtension][20] - executes `phpspec run` after `describe`
   ([PhpSpec][2] extension).
