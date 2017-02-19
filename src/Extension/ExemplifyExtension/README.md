@@ -85,14 +85,21 @@ public function it_should_be_constructed_through_with_name()
 
 ## Similar Extensions
 
-* [PhpSpecRunExtension][10] will execute the phpspec run command after the
-  describe and exemplify commands, saving a few keystrokes.
-* [ExemplifyExtension][0] and [PhpSpecRunExtension][10] are part of
-  [BehatSpec](https://github.com/richardmiller/BehatSpec) package,
-  which provides integration between latest stable Behat and PhpSpec. This
-  includes running the exemplify command automatically for missing methods
-  encountered when running Behat features.
+* [PhpSpecExtension][10] - executes `phpspec describe` command automatically
+  for classes that are missing in `behat` ([Behat][1] extension).
+* [ErrorExtension][11] - provides formatted error messages for `behat`. This is
+  used by [PhpSpecRunExtension][20] to trigger `phpspec describe` ([Behat][1]
+  extension).
+- [PhpSpecRunExtension][20] - provides support of executing `phpspec run` commands automatically after `describe` (or `exemplify`) commands.
+- [BehatSpec][3] is a collection of extensions that offer integration
+  between latest stable [Behat][1] and [PhpSpec][2].
 
-[0](https://github.com/richardmiller/ExemplifyExtension)
-[10](https://github.com/richardmiller/PhpSpecRunExtension)
+
+[1]: http://docs.behat.org/en/stable
+[2]: http://phpspec.net/en/stable
+[3]: https://github.com/richardmiller/BehatSpec
+[10]: https://github.com/richardmiller/PhpSpecExtension
+[11]: https://github.com/richardmiller/ErrorExtension
+[20]: https://github.com/richardmiller/PhpSpecRunExtension
+[21]: https://github.com/richardmiller/ExemplifyExtension
 
