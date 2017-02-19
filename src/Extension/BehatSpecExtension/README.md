@@ -1,4 +1,9 @@
 # BehatSpec
 
-Standalone extension for [BehatSpec](https://github.com/richardmiller/BehatSpec).  
-Full documentation is available [here](https://github.com/richardmiller/BehatSpec/blob/master/README.md).
+[BehatSpec](https://github.com/richardmiller/BehatSpec) provides integration
+between [Behat](http://docs.behat.org/en/latest/) and
+[PhpSpec](http://phpspec.net/).
+
+Full documentation is available in [BehatSpec repository
+page](https://github.com/richardmiller/BehatSpec#README).
+
