@@ -3,8 +3,13 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/richardmiller/BehatSpec/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/richardmiller/BehatSpec/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/richardmiller/BehatSpec/badges/build.png?b=master)](https://scrutinizer-ci.com/g/richardmiller/BehatSpec/build-status/master)
 
-## What
+**Note!** This is `phpspec2-support` maintenance branch, last to support PHP
+5.4 and PhpSpec2. You should look into updating to latest supported release of
+BehatSpec (for information see `master` branch). This project has since updated
+it's structure and any PRs for the extensions should be sent to main
+[BehatSpec Repository](https://github.com/richardmiller/BehatSpec).
 
+## What
 
 Integration between [Behat](http://docs.behat.org/en/v3.0/) and
 [PhpSpec](http://phpspec.net/).
