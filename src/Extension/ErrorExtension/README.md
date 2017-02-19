@@ -7,7 +7,8 @@ ErrorExtension
 **Note!** This is **READ-ONLY** repository. Any PRs should be based on and sent
 to [BehatSpec repository](https://github.com/richardmiller/BehatSpec).
 
-[Behat](http://docs.behat.org/en/latest/) extension to provide formatted error messages for fatal errors.
+[Behat](http://docs.behat.org/en/stable/) extension to provide formatted error
+messages for fatal errors.
 
 This stops the large stack traces appearing on every fatal error. Instead a simpler
 formatted error showing the error message, file and line number is shown.
@@ -37,9 +38,9 @@ Activate the extension by specifying its class in your ``behat.yml``:
 ```yaml
 # behat.yml
 default:
-  # ...
-  extensions:
-    RMiller\BehatSpec\Extension\ErrorExtension\ErrorExtension: ~
+    # ...
+    extensions:
+        RMiller\BehatSpec\Extension\ErrorExtension\ErrorExtension: ~
 ```
 
 Error Observers
@@ -61,7 +62,7 @@ interface ErrorObserver
 }
 ```
 
-This is used by the
+This extension is used by the
 [PhpSpecExtension](https://github.com/richardmiller/PhpSpecExtension)
 to trigger running PhpSpec commands on relevant errors.
 
