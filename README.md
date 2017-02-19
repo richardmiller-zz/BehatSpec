@@ -3,35 +3,50 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/richardmiller/BehatSpec/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/richardmiller/BehatSpec/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/richardmiller/BehatSpec/badges/build.png?b=master)](https://scrutinizer-ci.com/g/richardmiller/BehatSpec/build-status/master)
 
-## What
-
-Integration between [Behat](http://docs.behat.org/en/v3.0/) and
-[PhpSpec](http://phpspec.net/).
+[BehatSpec][0] is a collection of extenstions that offer integration
+between latest stable [Behat][1] and [PhpSpec][2]:
 
 * Creates specs for any missing classes encountered when running behat
 * Adds examples for any missing methods encountered when running behat
 * Executes the phpspec run command after this to add the described class/method
+
+This integration is done by the extensions that can also be used standalone:
+
+* [PhpSpecExtension][10] - executes `phpspec describe` command automatically
+  for classes that are missing in `behat` ([Behat][1] extension).
+* [ErrorExtension][11] - provides formatted error messages for `behat`. This is
+  used by [PhpSpecRunExtension] to trigger `phpspec describe` ([Behat][1]
+  extension).
+* [PhpSpecRunExtension][20] - executes `phpspec run` after `describe`
+  ([PhpSpec][2] extension).
+* [ExemplifyExtension][21] - adds `phpspec exemplify` command for generating
+  examples in specs ([PhpSpec][2] extension).
+
+However, if you install [BehatSpec][0] package extension, it will provide all
+the integrated extensions from a single package.
 
 ## Why
 
 This is useful when rather than using the Behat context to run an application
 through its UI, it is instead used to implement the domain model. For more
 information on this way of using Gherkin features to drive domain modelling
-read Everzet's post on [Modelling by Example](http://everzet.com/post/99045129766/introducing-modelling-by-example)
+read Everzet's post on [Modelling by
+Example](http://everzet.com/post/99045129766/introducing-modelling-by-example)
 
-When running a feature with a Context that contains a new class that does not exist
-or a method you will get a fatal error. If using PhpSpec the next step would be to
-start specifying that class using the describe command. This set of extensions provides
-integration between Behat and PhpSpec so that instead of a fatal error you can
-choose to run the describe command for the missing class automatically.
+When running a feature with a Context that contains a new class that does not
+exist or a method you will get a fatal error. If using PhpSpec the next step
+would be to start specifying that class using the describe command. This set of
+extensions provides integration between Behat and PhpSpec so that instead of
+a fatal error you can choose to run the describe command for the missing class
+automatically.
 
-It also uses my [ExemplifyExtension](https://github.com/richardmiller/ExemplifyExtension)
-so that you can automatically add examples for missing methods in a similar way.
+It also uses [ExemplifyExtension][21] so that you can automatically add
+examples for missing methods in a similar way.
 
 After describing a class or method in this way the `phpspec run` command can
 be used to automatically create the class or model. Since this is the typical
-next step in most cases, this extension automates that by asking you if you would
-like to do that next.
+next step in most cases, this extension automates that by asking you if you
+would like to do that next.
 
 ### An Example
 
@@ -48,8 +63,9 @@ public function aProductNamedAndPricedWasAddedToTheCatalogue($name, Money $price
 }
 ```
 
-Running the feature relating to this context would result in a fatal exception normally.
-Instead you get a simple error and the offer to create a spec for the missing class:
+Running the feature relating to this context would result in a fatal exception
+normally. Instead you get a simple error and the offer to create a spec for the
+missing class:
 
 ![Product not found](/docs/images/error.png?raw=true)
 
@@ -63,83 +79,71 @@ Which asks to create the class:
 
 ![Product created](/docs/images/product-created.png?raw=true)
 
-Running Behat again will result in a similar process for the `namedAndPriced` method.
-Where an example for the method will be added to the spec and the method added
-to the class.
+Running Behat again will result in a similar process for the `namedAndPriced`
+method. Where an example for the method will be added to the spec and the
+method added to the class.
 
 ## How
 
-### Installation
-
-This package provides multiple extensions for PhpSpec and Behat that integrate
-together and need to be enabled for the full functionality.
-
-Requires:
+### Requirements
 
 * Behat 3.0+
 * PhpSpec 3.0+
 * PHP 5.6+
 
-Install the extension as a development requirements in your project:
+**Note!** In order to use `BehatSpec` with PHPSpec 2.0 series and PHP 5.4, use
+`0.3.*` version series and check [install instructions for 0.3.* version][3].
+
+### Installation
+
+Install this package as a development requirement in your project:
 
 ```
 $ composer require --dev rmiller/behat-spec
 ```
 
-In order to use `BehatSpec` with PHPSpec 2.0 series and PHP 5.4, use `0.3.*`
-version series:
-
-```bash
-$ composer require --dev rmiller/behat-spec:0.3.*
-```
-
 ### Configuration
 
-Activate the Behat extension by specifying its class in your `behat.yml`:
+Activate the [Behat][1] extensions in `behat.yml` of your project:
 
 ```yaml
 # behat.yml
 # ...
-extensions:
-    RMiller\BehatSpec\Extension\BehatSpecExtension\BehatExtension:
-        path:  bin/phpspec #default value is bin/phpspec
-        config:  path/to/phpspec.yml #optional
+default:
+    # ...
+    extensions:
+        RMiller\BehatSpec\Extension\BehatSpecExtension\BehatExtension:
+            path:  bin/phpspec #default value is bin/phpspec
+            config:  path/to/phpspec.yml #optional
+        RMiller\BehatSpec\Extension\ErrorExtension\ErrorExtension: ~
+        RMiller\BehatSpec\Extension\PhpSpecExtension\PhpSpecExtension:
+            path:  bin/phpspec #default value is bin/phpspec
+            config:  path/to/phpspec.yml #optional
+
 ```
 
-Activate the PhpSpec extension by specifying its class in your `phpspec.yml`:
+Activate the [PhpSpec][2] extensions in `phpspec.yml` of your project:
 
 ```yaml
 # phpspec.yml
 extensions:
+    RMiller\BehatSpec\Extension\ExemplifyExtension\ExemplifyExtension: ~
     RMiller\BehatSpec\Extension\BehatSpecExtension\PhpSpecExtension: ~
-```
-
-Additional configuration can be provided for the running of the `phpspec run` command:
-
-It defaults to `bin/phpspec` for the path of phpspec and to run after the describe command.
-These can be overridden as follows:
-
-```yaml
-# phpspec.yml
+    RMiller\BehatSpec\Extension\PhpSpecRunExtension\PhpSpecRunExtension: ~
 rerunner:
     path: vendor/bin/phpspec
     commands: [describe, exemplify, your_own_fancy_command]
     config: path/to/phpspec.yml #optional
-
-extensions:
-    RMiller\BehatSpec\Extension\BehatSpecExtension\PhpSpecExtension: ~
 ```
 
-### Extensions
+Please refer to [Why](#Why) section for usage information.
 
-The provided by this package can also be used standalone:
+[0]: https://github.com/richardmiller/BehatSpec
+[1]: http://docs.behat.org/en/stable
+[2]: http://phpspec.net/en/stable
+[3]: https://github.com/richardmiller/BehatSpec/tree/phpspec2-support
+[10]: https://github.com/richardmiller/PhpSpecExtension
+[11]: https://github.com/richardmiller/ErrorExtension
+[20]: https://github.com/richardmiller/PhpSpecRunExtension
+[21]: https://github.com/richardmiller/ExemplifyExtension
 
-#### PhpSpec
-
-* [PhpSpecRunExtension](https://github.com/richardmiller/PhpSpecRunExtension)
-* [ExemplifyExtension](https://github.com/richardmiller/ExemplifyExtension)
-
-#### Behat
-
-* [PhpSpecExtension](https://github.com/richardmiller/PhpSpecExtension)
-* [ErrorExtension](https://github.com/richardmiller/ErrorExtension)
