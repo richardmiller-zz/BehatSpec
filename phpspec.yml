@@ -1,4 +1,6 @@
 suites:
-  error_extension:
-    namespace: RMiller\BehatSpec
-    psr4_prefix: RMiller\BehatSpec
+    error_extension:
+        namespace: RMiller\BehatSpec
+        psr4_prefix: RMiller\BehatSpec
+extensions:
+    RMiller\BehatSpec\Extension\ExemplifyExtension\ExemplifyExtension: ~
