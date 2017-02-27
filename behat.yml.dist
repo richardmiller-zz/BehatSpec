@@ -1,0 +1,12 @@
+default:
+    autoload:
+        'Console': %paths.base%/vendor/phpspec/phpspec/features/bootstrap
+        '': %paths.base%/features/bootstrap
+    suites:
+        exemplify:
+            contexts: [ FeatureContext ]
+    gherkin:
+        filters:
+            tags: ~@wip
+    formatters:
+        progress : ~

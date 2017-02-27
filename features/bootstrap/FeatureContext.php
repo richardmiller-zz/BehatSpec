@@ -51,7 +51,12 @@ class FeatureContext implements Context, SnippetAcceptingContext
      */
     public function theSpecFileShouldContain($file, PyStringNode $string)
     {
-        expect(file_get_contents($file))->toBe($string->getRaw());
+        $actual = file_get_contents($file);
+        $expected = $string->getRaw();
+
+        if($actual != $expected) {
+            throw new \RuntimeException("The generated spec file should have been:\n\n$expected\n\nbut was:\n\n$actual\n\n");
+        }
     }
 
     /**
@@ -83,7 +88,7 @@ class FeatureContext implements Context, SnippetAcceptingContext
      */
     private function createApplicationTester()
     {
-        file_put_contents('phpspec.yml', 'extensions: [RMiller\BehatSpec\Extension\ExemplifyExtension\ExemplifyExtension]');
+        file_put_contents('phpspec.yml', "extensions:\n    RMiller\\BehatSpec\\Extension\\ExemplifyExtension\\ExemplifyExtension: ~");
         $application = new Application('2.1-dev');
         $application->setAutoExit(false);
 
@@ -104,7 +109,11 @@ class FeatureContext implements Context, SnippetAcceptingContext
      */
     public function iShouldSee($message)
     {
-        expect($this->applicationTester->getDisplay())->toMatch('/'.preg_quote($message, '/').'/sm');
+        $actual = trim($this->applicationTester->getDisplay());
+
+        if($actual != $message) {
+            throw new \RuntimeException("The message should have been:\n\n$message\n\nbut was:\n\n$actual\n\n");
+        }
     }
 
     /**
