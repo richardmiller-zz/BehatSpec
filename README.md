@@ -115,26 +115,27 @@ default:
         RMiller\BehatSpec\Extension\BehatSpecExtension\BehatExtension:
             path:  bin/phpspec #default value is bin/phpspec
             config:  path/to/phpspec.yml #optional
-        RMiller\BehatSpec\Extension\ErrorExtension\ErrorExtension: ~
-        RMiller\BehatSpec\Extension\PhpSpecExtension\PhpSpecExtension:
-            path:  bin/phpspec #default value is bin/phpspec
-            config:  path/to/phpspec.yml #optional
-
 ```
 
-Activate the [PhpSpec][2] extensions in `phpspec.yml` of your project:
+**Note!** The configuration example above will also make sure that
+[PhpSpecExtension][10] and [ErrorExtension][11] are enabled in [Behat][1].
+You do NOT need to enable these specific extensions manually.
+
+Next, Activate the [PhpSpec][2] extensions in `phpspec.yml` of your project:
 
 ```yaml
 # phpspec.yml
 extensions:
-    RMiller\BehatSpec\Extension\ExemplifyExtension\ExemplifyExtension: ~
-    RMiller\BehatSpec\Extension\BehatSpecExtension\PhpSpecExtension: ~
-    RMiller\BehatSpec\Extension\PhpSpecRunExtension\PhpSpecRunExtension: ~
+    RMiller\BehatSpec\Extension\BehatSpecExtension\PhpSpecExtension:
 rerunner:
     path: vendor/bin/phpspec
     commands: [describe, exemplify, your_own_fancy_command]
     config: path/to/phpspec.yml #optional
 ```
+
+**Note!** The configuration example above will also make sure that
+[PhpSpecRunExtension][20] and [ExemplifyExtension][21] are enabled in
+[PhpSpec][2]. You do NOT need to enable these specific extensions manually.
 
 Please refer to [Why](#Why) section for usage information.
 
