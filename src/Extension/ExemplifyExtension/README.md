@@ -4,7 +4,11 @@ ExemplifyExtension
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/richardmiller/ExemplifyExtension/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/richardmiller/ExemplifyExtension/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/richardmiller/ExemplifyExtension/badges/build.png?b=master)](https://scrutinizer-ci.com/g/richardmiller/ExemplifyExtension/build-status/master)
 
-PhpSpec extension that adds exemplify command to generate examples in specs.
+**Note!** This is **READ-ONLY** repository. Any PRs should be based on and sent
+to [BehatSpec repository](https://github.com/richardmiller/BehatSpec).
+
+[PhpSpec](http://www.phpspec.net/en/stable) extension that adds exemplify
+command to generate examples in specs.
 
 For example, running:
 
@@ -13,7 +17,7 @@ bin/phpspec exemplify RMiller/Badger dig
 ```
 
 And choosing the default option of 'instance method', will add the following example
-to the spec/RMiller/BadgerSpec class:
+to the `spec/RMiller/BadgerSpec` class:
 
 ```
 public function it_should_dig()
@@ -37,7 +41,7 @@ Otherwise the examples will be created but will not run.
 Require the extension:
 
 ```
-$ composer require --dev rmiller/exemplify-extension:^0.5
+$ composer require --dev rmiller/exemplify-extension
 ```
 
 ## Configuration
@@ -55,8 +59,8 @@ extensions:
 Three different method types are supported, on running the command you will be
 asked which type of method is being described. These are:
 
-* Instance Method (e.g. $this->dig())
-* Static Method (e.g. $this::dig())
+* Instance Method (e.g. `$this->dig()`)
+* Static Method (e.g. `$this::dig()`)
 * Named Constructor
 
 The names constructor option is for static methods used to instantiate and return
@@ -79,16 +83,23 @@ public function it_should_be_constructed_through_with_name()
 }
 ```
 
-## Other Potentially Useful Extensions
+## Similar Extensions
 
-* For further laziness [PhpSpecRunExtension](https://github.com/richardmiller/PhpSpecRunExtension)
-will execute the phpspec run command after the describe and exemplify commands,
-saving a few keystrokes.
+* [PhpSpecExtension][10] - executes `phpspec describe` command automatically
+  for classes that are missing in `behat` ([Behat][1] extension).
+* [ErrorExtension][11] - provides formatted error messages for `behat`. This is
+  used by [PhpSpecRunExtension][20] to trigger `phpspec describe` ([Behat][1]
+  extension).
+- [PhpSpecRunExtension][20] - provides support of executing `phpspec run` commands automatically after `describe` (or `exemplify`) commands.
+- [BehatSpec][3] is a collection of extensions that offer integration
+  between latest stable [Behat][1] and [PhpSpec][2].
 
-* This extension and PhpSpecRun are also part of [BehatSpec](https://github.com/richardmiller/BehatSpec)
-which provides integration between Behat and PhpSpec. This includes running the exemplify
-command automatically for missing methods encountered when running Behat features.
 
-
-
+[1]: http://docs.behat.org/en/stable
+[2]: http://phpspec.net/en/stable
+[3]: https://github.com/richardmiller/BehatSpec
+[10]: https://github.com/richardmiller/PhpSpecExtension
+[11]: https://github.com/richardmiller/ErrorExtension
+[20]: https://github.com/richardmiller/PhpSpecRunExtension
+[21]: https://github.com/richardmiller/ExemplifyExtension
 

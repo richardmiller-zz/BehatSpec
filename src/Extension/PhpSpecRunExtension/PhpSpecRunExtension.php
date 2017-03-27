@@ -20,9 +20,8 @@ class PhpSpecRunExtension implements Extension
      */
     public function load(ServiceContainer $container, array $params)
     {
-        $container->define('rmiller.run_runner', function ($c) {
+        $container->define('rmiller.run_runner', function ($c) use ($params) {
 
-            $params = $c->getParam('rerunner', []);
             $phpspecPath = isset($params['path']) ? $params['path'] : 'bin/phpspec';
             $phpspecConfig = isset($params['config']) ? $params['config'] : null;
 
