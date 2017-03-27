@@ -126,11 +126,12 @@ Next, Activate the [PhpSpec][2] extensions in `phpspec.yml` of your project:
 ```yaml
 # phpspec.yml
 extensions:
-    RMiller\BehatSpec\Extension\BehatSpecExtension\PhpSpecExtension:
-rerunner:
-    path: vendor/bin/phpspec
-    commands: [describe, exemplify, your_own_fancy_command]
-    config: path/to/phpspec.yml #optional
+    RMiller\BehatSpec\Extension\BehatSpecExtension\PhpSpecExtension: ~
+    # The below part is only needed if you want to customize the defaults
+    RMiller\BehatSpec\Extension\PhpSpecRunExtension\PhpSpecRunExtension:
+        path: bin/phpspec
+        commands: [describe, exemplify, your_own_fancy_command]
+        config: phpspec.yml
 ```
 
 **Note!** The configuration example above will also make sure that

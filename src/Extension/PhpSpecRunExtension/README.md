@@ -40,10 +40,9 @@ commands. This can be overridden when enabling extension in `phpspec.yml`:
 # ..
     extensions:
         RMiller\BehatSpec\Extension\PhpSpecRunExtension\PhpSpecRunExtension: ~
-    rerunner:
-        path: vendor/bin/phpspec              # path to phpspec bin
-        commands: [describe, exemplify]       # commans
-        config: path/to/phpspec.yml #optional # path to phpspec.yml (optional)
+            path: vendor/bin/phpspec                    # path to phpspec bin
+            commands: [describe, exemplify, other_cmd]  # commands
+            config: path/to/phpspec.yml                 # custom phpspec.yml path
 ```
 
 This will now also execute the run command after the exemplify command added by
